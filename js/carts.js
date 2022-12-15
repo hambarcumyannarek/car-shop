@@ -17,7 +17,7 @@ const vse = document.querySelector('.shopping .vse');
 vse.addEventListener('click', closeShoping);
 shopHeaderClose.addEventListener('click', closeShoping);
 
-
+alert("hi");
 
 
 const carsInfo = [
