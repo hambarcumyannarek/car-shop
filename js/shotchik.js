@@ -28,14 +28,6 @@ const cards = document.querySelectorAll('.cards .card');
 
 
 
-const cars = [
-    {
-        carName: 'Tesla',
-        carModel: 'Model X',
-        carImg: 'img/featured1.png',
-        gin: 165900,
-    },
-]
 
 //                GNER
 const teslaX = 165900;
