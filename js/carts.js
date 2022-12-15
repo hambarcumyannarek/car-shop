@@ -69,7 +69,6 @@ const btn1 = document.querySelector('.btn1');
 //     },
 // ]
 
-
 const carsInfo = [
     [
         'Tesla',
