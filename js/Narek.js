@@ -18,6 +18,29 @@ vse.addEventListener('click', closeShoping);
 shopHeaderClose.addEventListener('click', closeShoping);
 
 
+
+
+const likeBtn = document.querySelector('.likeBtn');
+const likeBlank = document.querySelector('.likeBlank');
+
+likeBtn.addEventListener('click', function() {
+    likeBlank.classList.toggle('active');
+    document.body.style.overflowY = 'hidden';
+})
+
+function closeShoping2() {
+    likeBlank.classList.remove('active');
+    document.body.style.overflowY = 'auto';
+}
+
+const LshopHeaderClose = document.querySelector('.likeBlank-header .close');
+const Lvse = document.querySelector('.likeBlank .vse');
+
+Lvse.addEventListener('click', closeShoping2);
+LshopHeaderClose.addEventListener('click', closeShoping2);
+
+
+
 const btn1 = document.querySelector('.btn1');
 
 // const carsInfo = [
