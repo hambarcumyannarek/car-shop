@@ -55,6 +55,7 @@ minusTeslaX.addEventListener("click", () => {
         quantityTeslaX.innerHTML = numTeslaX;
         ginTeslaX.innerHTML = '$' + teslaX * numTeslaX;
         console.log(numTeslaX);
+        //module.exports = ginTeslaX;
     }
 })
 

@@ -17,7 +17,6 @@ body
     height: 100vh;
     background: rgb(10,9,10);
 }
-
 .navbar
 {
     width: 100%;
@@ -243,11 +242,10 @@ body
     align-items: center;
     padding: 20px;
 }
-
 .shopping > .shopping-container > .shop-main > .card {
     width: 100%;
     padding: 30px 25px;
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
     flex-flow: row wrap;
@@ -259,6 +257,9 @@ body
     overflow: hidden;
 }
 
+/* .shopping > .shopping-container > .shop-main > .card1 {
+    display: flex;
+} */
 .shopping > .shopping-container > .shop-main > .card::before {
     content: '';
     width: 200px;
@@ -278,7 +279,6 @@ body
     gap: 15px;
     z-index: 1;
 }
-
 .shopping > .shopping-container > .shop-main > .card > .img > img {
     width: 100%;
 }
