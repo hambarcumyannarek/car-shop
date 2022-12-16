@@ -100,14 +100,14 @@ body
 .contaniner > .cards > .card{
     height: 461px;
 }
-.navbar > .navBtns > .cartBtn {
+.navbar > .navBtns > .btn {
     cursor: pointer;
     font-size: 2.2em;
     color: #fff;
     transition: all 0.5s;
 }
 
-.navbar > .navBtns > .cartBtn:hover {
+.navbar > .navBtns > .btn:hover {
     color: rgb(52,103,193);
 }
 
