@@ -120,11 +120,11 @@ body
     visibility: hidden;
 }
 
-.shopping.active {
+.globalSL.active {
     visibility: visible;
 }
 
-.shopping > .vse {
+.globalSL > .vse {
     width: 100%;
     position: absolute;
     top: 0;
@@ -138,33 +138,11 @@ body
     transition: 0.5s;
 }
 
-.shopping.active > .vse {
+.globalSL.active > .vse {
     visibility: visible;
     opacity: 1;
 }
 
-.likeBlank.active {
-    visibility: visible;
-}
-
-.likeBlank > .vse {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    height: 100vh;
-    background: rgba(10,9,10, 0.1);
-    backdrop-filter: blur(8px);
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.5s;
-}
-
-.likeBlank.active > .vse {
-    visibility: visible;
-    opacity: 1;
-}
 
 .globalSL > .globalSL-container {
     max-width: 500px;
@@ -173,13 +151,11 @@ body
     background: #fff;
     z-index: 10;
     padding-bottom: 20px;
-    transform: translateX(-100%);
     box-shadow: 0 2px 15px 1px #000;
     display: flex;
     flex-direction: column;
     gap: 30px;
     overflow: auto;
-    transition: all 0.5s 0.3s;
 }
 
 .globalSL > .globalSL-container::-webkit-scrollbar {
@@ -200,9 +176,28 @@ body
     filter: blur(70px);
 }
 
-.globalSL.active > .globalSL-container {
-    transform: translateX(0);
+.shopping > .shopping-container {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: all 0.5s 0.3s;
 }
+
+.shopping.active > .shopping-container {
+    left: 0%;
+}
+
+.likeBlank > .likeBlank-container {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    transition: all 0.5s 0.3s;
+}
+
+.likeBlank.active > .likeBlank-container {
+    right: 0%;
+}
+
 
 .globalSL > .globalSL-container > .globalSL-header {
     display: flex;
@@ -378,6 +373,72 @@ body
 .globalSL > .globalSL-container > .globalSL-main > .card > .card-right > .button > .delete:hover > ion-icon {
     font-size: 1.6em;
     color: rgb(17,17,21);
+}
+
+.likeBlank > .likeBlank-container > .likeBlank-main > .card > .card-right {
+    gap: 30px;
+}
+
+.likeBlank > .likeBlank-container > .likeBlank-main > .card > .card-right > .button > .delete {
+    padding: 7px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: rgb(193,8,17);
+}
+
+.likeBlank > .likeBlank-container > .likeBlank-main > .card > .card-right > .button > .btn {
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(52, 103, 193);
+    transition: all 0.5s;
+}
+
+.likeBlank > .likeBlank-container > .likeBlank-main > .card > .card-right > .button > .btn:hover {
+    background: #fff;
+}
+
+.likeBlank > .likeBlank-container > .likeBlank-main > .card > .card-right > .button > .btn > ion-icon {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.likeBlank > .likeBlank-container > .likeBlank-main > .card > .card-right > .button > .btn:hover > ion-icon {
+    color: rgb(17,17,21);
+}
+
+.likeBlank > .likeBlank-container > .likeBlank-main > .card > .topHeart {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -15px; left: -15px;
+    background: #fff;
+    box-shadow: 0 0 5px 3px rgba(10,9,10, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.likeBlank > .likeBlank-container > .likeBlank-main > .card {
+    overflow: visible;
+}
+
+.likeBlank > .likeBlank-container > .likeBlank-main > .card::before {
+    content: '';
+    display: none;
+}
+
+.likeBlank > .likeBlank-container > .likeBlank-main > .card > .topHeart > ion-icon {
+    font-size: 1.5em;
+    color: rgb(193,8,17);
 }
 
 .responsiv-menu
@@ -1768,16 +1829,16 @@ body
     }
 
         
-    .shopping > .shopping-container {
+    .globalSL > .globalSL-container {
         max-width: 650px;
         width: 100%;
     }
 
-    .shopping > .shopping-container > .shop-main {
+    .globalSL > .globalSL-container > .globalSL-main {
         flex-flow: row wrap;
     }
 
-    .shopping > .shopping-container > .shop-main > .card {
+    .globalSL > .globalSL-container > .globalSL-main > .card {
         width: 230px;
         display: flex;
         align-items: center;
@@ -1844,7 +1905,7 @@ body
     gap: 50px;
 }
 
-.shopping > .shopping-container > .shop-main > .card {
+.globalSL > .globalSL-container > .globalSL-main > .card {
     width: 250px;
     display: flex;
     align-items: center;

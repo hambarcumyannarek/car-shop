@@ -119,6 +119,7 @@ const carsInfo = [
 ]
 
 
+
 const shopMain = document.querySelector('.shop-main');
 const addCont = document.querySelectorAll('#addCont .card');
 let x = document.querySelector('.x')
