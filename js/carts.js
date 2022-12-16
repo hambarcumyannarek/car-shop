@@ -13,7 +13,14 @@ const card4 = document.querySelector('.card4');
 const card5 = document.querySelector('.card5');
 const card6 = document.querySelector('.card6');
 
+//                        delete icons
 
+const delete1 = document.querySelector('#delete1');
+const delete2 = document.querySelector('#delete2');
+const delete3 = document.querySelector('#delete3');
+const delete4 = document.querySelector('#delete4');
+const delete5 = document.querySelector('#delete5');
+const delete6 = document.querySelector('#delete6');
                 //             Icons
 
 
@@ -101,6 +108,24 @@ const carsInfo = [
     },
 ]
 
+delete1.addEventListener("click", () => {
+   card1.style.display = "none";
+});
+delete2.addEventListener("click", () => {
+   card2.style.display = "none";
+});
+delete3.addEventListener("click", () => {
+   card3.style.display = "none";
+});
+delete4.addEventListener("click", () => {
+   card4.style.display = "none";
+});
+delete5.addEventListener("click", () => {
+   card5.style.display = "none";
+});
+delete6.addEventListener("click", () => {
+   card6.style.display = "none";
+});
 
 const cardArray = [card1,card2,card3,card4,card5,card6];
 
