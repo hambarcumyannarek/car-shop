@@ -1,6 +1,3 @@
-// APER SCRIPTI MEJ CODE GREL PETQ CHI DRA HAMR EL CHEM BACE
-
-
 const cartBtn = document.querySelector('.cartBtn');
 const shopping = document.querySelector('.shopping');
 
@@ -137,7 +134,4 @@ addCont.forEach((val) => {
 
 })
 
-
-
-alert(aaaaa)
 
