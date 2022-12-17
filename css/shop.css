@@ -17,6 +17,7 @@ body
     height: 100vh;
     background: rgb(10,9,10);
 }
+
 .navbar
 {
     width: 100%;
@@ -99,18 +100,18 @@ body
 .contaniner > .cards > .card{
     height: 461px;
 }
-.navbar > .navBtns > .cartBtn {
+.navbar > .navBtns > .btn {
     cursor: pointer;
     font-size: 2.2em;
     color: #fff;
     transition: all 0.5s;
 }
 
-.navbar > .navBtns > .cartBtn:hover {
+.navbar > .navBtns > .btn:hover {
     color: rgb(52,103,193);
 }
 
-.shopping {
+.globalSL {
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -119,11 +120,11 @@ body
     visibility: hidden;
 }
 
-.shopping.active {
+.globalSL.active {
     visibility: visible;
 }
 
-.shopping > .vse {
+.globalSL > .vse {
     width: 100%;
     position: absolute;
     top: 0;
@@ -137,50 +138,68 @@ body
     transition: 0.5s;
 }
 
-.shopping.active > .vse {
+.globalSL.active > .vse {
     visibility: visible;
     opacity: 1;
 }
 
-.shopping > .shopping-container {
+
+.globalSL > .globalSL-container {
     max-width: 500px;
     width: 100%;
     height: 100vh;
     background: #fff;
     z-index: 10;
     padding-bottom: 20px;
-    transform: translateX(-100%);
     box-shadow: 0 2px 15px 1px #000;
     display: flex;
     flex-direction: column;
     gap: 30px;
     overflow: auto;
-    transition: all 0.5s 0.3s;
 }
 
-.shopping > .shopping-container::-webkit-scrollbar {
+.globalSL > .globalSL-container::-webkit-scrollbar {
     width: 5px;
 }
 
-.shopping > .shopping-container::-webkit-scrollbar-thumb {
+.globalSL > .globalSL-container::-webkit-scrollbar-thumb {
     background: rgb(17,17,21);
     border-radius: 30px;
 }
 
-.shopping > .shopping-container::-webkit-scrollbar-thumb:hover {
+.globalSL > .globalSL-container::-webkit-scrollbar-thumb:hover {
     background: rgb(52,103,193);
 }
 
-.shopping > .shopping-container::-webkit-scrollbar-track {
+.globalSL > .globalSL-container::-webkit-scrollbar-track {
     background: rgb(56,71,95);
     filter: blur(70px);
 }
 
-.shopping.active > .shopping-container {
-    transform: translateX(0);
+.shopping > .shopping-container {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: all 0.5s 0.3s;
 }
 
-.shopping > .shopping-container > .shop-header {
+.shopping.active > .shopping-container {
+    left: 0%;
+}
+
+.likeBlank > .likeBlank-container {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    transition: all 0.5s 0.3s;
+}
+
+.likeBlank.active > .likeBlank-container {
+    right: 0%;
+}
+
+
+.globalSL > .globalSL-container > .globalSL-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -191,7 +210,7 @@ body
     z-index: 100;
 }
 
-.shopping > .shopping-container > .shop-header > .close {
+.globalSL > .globalSL-container > .globalSL-header > .close {
     width: 42px;
     height: 42px;
     display: flex;
@@ -202,20 +221,20 @@ body
     transition: all 0.5s;
 }
 
-.shopping > .shopping-container > .shop-header > .close:hover {
+.globalSL > .globalSL-container > .globalSL-header > .close:hover {
     border: 2px solid rgb(52,103,193);
 }
 
-.shopping > .shopping-container > .shop-header > .close > ion-icon {
+.globalSL > .globalSL-container > .globalSL-header > .close > ion-icon {
     font-size: 2em;
     color: rgb(17,17,21);
 }
 
-.shopping > .shopping-container > .shop-header > .close:hover > ion-icon {
+.globalSL > .globalSL-container > .globalSL-header > .close:hover > ion-icon {
     color: rgb(52,103,193);
 }
 
-.shopping > .shopping-container > .shop-header > .logo {
+.globalSL > .globalSL-container > .globalSL-header > .logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -223,18 +242,18 @@ body
     gap: 8px;
 }
 
-.shopping > .shopping-container > .shop-header > .logo > h4 {
+.globalSL > .globalSL-container > .globalSL-header > .logo > h4 {
     font-size: 1.5em;
     color: rgb(17,17,21);
     font-weight: normal;
 }
 
-.shopping > .shopping-container > .shop-header > .logo ion-icon {
+.globalSL > .globalSL-container > .globalSL-header > .logo ion-icon {
     font-size: 2.3em;
     color: rgb(17,17,21);
 }
 
-.shopping > .shopping-container > .shop-main {
+.globalSL > .globalSL-container > .globalSL-main {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -242,10 +261,11 @@ body
     align-items: center;
     padding: 20px;
 }
-.shopping > .shopping-container > .shop-main > .card {
+
+.globalSL > .globalSL-container > .globalSL-main > .card {
     width: 100%;
     padding: 30px 25px;
-    display: none;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     flex-flow: row wrap;
@@ -257,10 +277,7 @@ body
     overflow: hidden;
 }
 
-/* .shopping > .shopping-container > .shop-main > .card1 {
-    display: flex;
-} */
-.shopping > .shopping-container > .shop-main > .card::before {
+.globalSL > .globalSL-container > .globalSL-main > .card::before {
     content: '';
     width: 200px;
     height: 200px;
@@ -272,48 +289,51 @@ body
     z-index: 0;
 }
 
-.shopping > .shopping-container > .shop-main > .card > .img {
+.globalSL > .globalSL-container > .globalSL-main > .card > .img {
     width: 170px;
     display: flex;
     flex-direction: column;
     gap: 15px;
     z-index: 1;
 }
-.shopping > .shopping-container > .shop-main > .card > .img > img {
+
+.globalSL > .globalSL-container > .globalSL-main > .card > .img > img {
     width: 100%;
+    height: 85px;
+    background-size: cover;
 }
 
-.shopping > .shopping-container > .shop-main > .card > .card-right {
+.globalSL > .globalSL-container > .globalSL-main > .card > .card-right {
     display: flex;
     flex-direction: column;
     gap: 15px;
     z-index: 1;
 }
 
-.shopping > .shopping-container > .shop-main > .card > .card-right > .top {
+.globalSL > .globalSL-container > .globalSL-main > .card > .card-right > .top {
     display: flex;
     flex-direction: column;
     gap: 3px;
 }
 
-.shopping > .shopping-container > .shop-main > .card > .card-right > .top > h3 {
+.globalSL > .globalSL-container > .globalSL-main > .card > .card-right > .top > h3 {
     font-size: 1.6em;
     color: #fff;
     font-weight: normal;
 }
 
-.shopping > .shopping-container > .shop-main > .card > .card-right > .top > p {
+.globalSL > .globalSL-container > .globalSL-main > .card > .card-right > .top > p {
     color: #ccc;
     font-weight: normal;
 }
 
-.shopping > .shopping-container > .shop-main > .card > .img > .gin {
+.globalSL > .globalSL-container > .globalSL-main > .card > .img > .gin {
     text-align: center;
     font-size: 1.5em;
     color: #fff;
 }
 
-.shopping > .shopping-container > .shop-main > .card > .card-right > .button {
+.globalSL > .globalSL-container > .globalSL-main > .card > .card-right > .button {
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -321,7 +341,7 @@ body
     align-items: center;
 }
 
-.shopping > .shopping-container > .shop-main > .card > .card-right > .button > button {
+.globalSL > .globalSL-container > .globalSL-main > .card > .card-right > .button > button {
     border-radius: 30px;
     border: none;
     text-align: center;
@@ -334,12 +354,12 @@ body
     transition: all 0.5s;
 }
 
-.shopping > .shopping-container > .shop-main > .card > .card-right > .button > button:hover {
+.globalSL > .globalSL-container > .globalSL-main > .card > .card-right > .button > button:hover {
     background: #fff;
     color: rgb(17,17,21);
 }
 
-.shopping > .shopping-container > .shop-main > .card > .card-right > .button > .delete {
+.globalSL > .globalSL-container > .globalSL-main > .card > .card-right > .button > .delete {
     padding: 12px;
     display: flex;
     justify-content: center;
@@ -347,14 +367,85 @@ body
     background: rgb(193,8,17);
 }
 
-.shopping > .shopping-container > .shop-main > .card > .card-right > .button > .delete > ion-icon {
+.globalSL > .globalSL-container > .globalSL-main > .card > .card-right > .button > .delete > ion-icon {
     font-size: 1.6em;
     color: #fff;
 }
 
-.shopping > .shopping-container > .shop-main > .card > .card-right > .button > .delete:hover > ion-icon {
+.globalSL > .globalSL-container > .globalSL-main > .card > .card-right > .button > .delete:hover > ion-icon {
     font-size: 1.6em;
     color: rgb(17,17,21);
+}
+
+.likeBlank > .likeBlank-container > .likeBlank-main > .card > .card-right {
+    gap: 30px;
+}
+
+.likeBlank > .likeBlank-container > .likeBlank-main > .card > .card-right > .button > .delete {
+    padding: 7px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: rgb(193,8,17);
+}
+
+.likeBlank > .likeBlank-container > .likeBlank-main > .card > .card-right > .button > .btn {
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(52, 103, 193);
+    transition: all 0.5s;
+}
+
+.likeBlank > .likeBlank-container > .likeBlank-main > .card > .card-right > .button > .btn:hover {
+    background: #fff;
+}
+
+.likeBlank > .likeBlank-container > .likeBlank-main > .card > .card-right > .button > .btn > ion-icon {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.likeBlank > .likeBlank-container > .likeBlank-main > .card > .card-right > .button > .btn:hover > ion-icon {
+    color: rgb(17,17,21);
+}
+
+.likeBlank > .likeBlank-container > .likeBlank-main > .card > .topHeart {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -15px; left: -15px;
+    background: #fff;
+    box-shadow: 0 0 5px 3px rgba(10,9,10, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.likeBlank > .likeBlank-container > .likeBlank-main > .card {
+    overflow: visible;
+}
+
+.likeBlank > .likeBlank-container > .likeBlank-main > .card::before {
+    content: '';
+    display: none;
+}
+
+.likeBlank > .likeBlank-container > .likeBlank-main > .card > .topHeart > ion-icon {
+    font-size: 1.5em;
+    color: rgb(193,8,17);
+}
+
+
+.shopping > .shopping-container > .shop-main > .card {
+    display: none;
 }
 
 .responsiv-menu
@@ -1745,16 +1836,16 @@ body
     }
 
         
-    .shopping > .shopping-container {
+    .globalSL > .globalSL-container {
         max-width: 650px;
         width: 100%;
     }
 
-    .shopping > .shopping-container > .shop-main {
+    .globalSL > .globalSL-container > .globalSL-main {
         flex-flow: row wrap;
     }
 
-    .shopping > .shopping-container > .shop-main > .card {
+    .globalSL > .globalSL-container > .globalSL-main > .card {
         width: 230px;
         display: flex;
         align-items: center;
@@ -1821,7 +1912,7 @@ body
     gap: 50px;
 }
 
-.shopping > .shopping-container > .shop-main > .card {
+.globalSL > .globalSL-container > .globalSL-main > .card {
     width: 250px;
     display: flex;
     align-items: center;
