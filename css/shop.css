@@ -100,6 +100,7 @@ body
 .contaniner > .cards > .card{
     height: 461px;
 }
+
 .navbar > .navBtns > .btn {
     cursor: pointer;
     font-size: 2.2em;
@@ -109,6 +110,24 @@ body
 
 .navbar > .navBtns > .btn:hover {
     color: rgb(52,103,193);
+}
+
+.navbar > .navBtns > .cartBtn {
+    position: relative;
+}
+
+.navbar > .navBtns > .cartBtn > .count {
+    width: 15px;
+    height: 15px;
+    background: rgb(52,103,193);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: #fff;
+    position: absolute;
+    top: -1px; right: -5px;
 }
 
 .globalSL {

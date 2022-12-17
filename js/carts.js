@@ -59,6 +59,9 @@ const card6Name = document.querySelector('#card6Name');
 const card6Price = document.querySelector('#card6Price');
 const card6Description = document.querySelector('#card6Description');
 
+
+
+
 const carsInfo = [
     {
         carName: 'Tesla',
@@ -128,6 +131,8 @@ delete6.addEventListener("click", () => {
 });
 
 const cardArray = [card1,card2,card3,card4,card5,card6];
+
+
 
 teslaXIcon.addEventListener('click', () => {
     for (let i = 0; i < cardArray.length; i++) {
@@ -424,7 +429,26 @@ const Lvse = document.querySelector('.likeBlank .vse');
 Lvse.addEventListener('click', closeShoping2);
 LshopHeaderClose.addEventListener('click', closeShoping2);
 
+const contCards = document.querySelectorAll('#addCont .card');
+const count = document.querySelector('.cartBtn .count');
+let countNum = 0; // count
+const deletes = document.querySelectorAll('.delete ion-icon');
 
+deletes.forEach((val) => {
+   val.addEventListener('click', () => {
+      countNum--;
+      count.innerText = countNum;
+   })
+})
+contCards.forEach((val) => {
+   let buyIcon = val.querySelector('.icons .cart');
+   buyIcon.addEventListener('click', function() {
+         if(countNum < cardArray.length) {
+            countNum++;
+            count.innerText = countNum;
+         }
+   }) 
+})
 
 
 // const carsInfo = [
