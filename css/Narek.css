@@ -100,6 +100,7 @@ body
 .contaniner > .cards > .card{
     height: 461px;
 }
+
 .navbar > .navBtns > .btn {
     cursor: pointer;
     font-size: 2.2em;
@@ -109,6 +110,24 @@ body
 
 .navbar > .navBtns > .btn:hover {
     color: rgb(52,103,193);
+}
+
+.navbar > .navBtns > .cartBtn {
+    position: relative;
+}
+
+.navbar > .navBtns > .cartBtn > .count {
+    width: 15px;
+    height: 15px;
+    background: rgb(52,103,193);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: #fff;
+    position: absolute;
+    top: -1px; right: -5px;
 }
 
 .globalSL {
@@ -299,6 +318,8 @@ body
 
 .globalSL > .globalSL-container > .globalSL-main > .card > .img > img {
     width: 100%;
+    height: 85px;
+    background-size: cover;
 }
 
 .globalSL > .globalSL-container > .globalSL-main > .card > .card-right {
@@ -440,6 +461,11 @@ body
     font-size: 1.5em;
     color: rgb(193,8,17);
 }
+
+
+/* .shopping > .shopping-container > .shop-main > .card {
+    display: none;
+} */
 
 .responsiv-menu
 {
@@ -1259,10 +1285,12 @@ body
 }
 
 
-.cards > .card > .gin
+.cards > .card > #gin-box
 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     color: #fff;
-    font-size: 1.5em;
     font-weight: normal;
 }
 
