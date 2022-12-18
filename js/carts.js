@@ -113,31 +113,37 @@ teslaXIcon.addEventListener('click', () => {
         const val = cardArray[i];
         if(val.style.display !== 'flex') {
             if (i === 0) {
+               countNum++;
                card1Img.src = carsInfo[0].carImg;
                card1Name.innerHTML = carsInfo[0].carName;
                card1Description.innerHTML = carsInfo[0].carModel;
                card1Price.innerHTML = carsInfo[0].carGin;
             } else if (i === 1){
+               countNum++;
                card2Img.src = carsInfo[0].carImg;
                card2Name.innerHTML = carsInfo[0].carName;
                card2Description.innerHTML = carsInfo[0].carModel;
                card2Price.innerHTML = carsInfo[0].carGin;
             } else if(i === 2) {
+               countNum++;
                card3Img.src = carsInfo[0].carImg;
                card3Name.innerHTML = carsInfo[0].carName;
                card3Description.innerHTML = carsInfo[0].carModel;
                card3Price.innerHTML = carsInfo[0].carGin;
             } else if (i === 3) {
+               countNum++;
                card4Img.src = carsInfo[0].carImg;
                card4Name.innerHTML = carsInfo[0].carName;
                card4Description.innerHTML = carsInfo[0].carModel;
                card4Price.innerHTML = carsInfo[0].carGin;
             } else if (i === 4) {
+               countNum++;
                card5Img.src = carsInfo[0].carImg;
                card5Name.innerHTML = carsInfo[0].carName;
                card5Description.innerHTML = carsInfo[0].carModel;
                card5Price.innerHTML = carsInfo[0].carGin;
             } else if(i === 5) {
+               countNum++;
                card6Img.src = carsInfo[0].carImg;
                card6Name.innerHTML = carsInfo[0].carName;
                card6Description.innerHTML = carsInfo[0].carModel;
@@ -156,31 +162,37 @@ tesla3Icon.addEventListener('click', () => {
         const val = cardArray[i];
         if(val.style.display !== 'flex') {
             if (i === 0) {
-               card1Img.src = carsInfo[1].carImg;
+               card1Img.src = 
+               countNum++;carsInfo[1].carImg;
                card1Name.innerHTML = carsInfo[1].carName;
                card1Description.innerHTML = carsInfo[1].carModel;
                card1Price.innerHTML = carsInfo[1].carGin;
             } else if (i === 1){
+               countNum++;
                card2Img.src = carsInfo[1].carImg;
                card2Name.innerHTML = carsInfo[1].carName;
                card2Description.innerHTML = carsInfo[1].carModel;
                card2Price.innerHTML = carsInfo[1].carGin;
             } else if(i === 2) {
+               countNum++;
                card3Img.src = carsInfo[1].carImg;
                card3Name.innerHTML = carsInfo[1].carName;
                card3Description.innerHTML = carsInfo[1].carModel;
                card3Price.innerHTML = carsInfo[1].carGin;
             } else if (i === 3) {
+               countNum++;
                card4Img.src = carsInfo[1].carImg;
                card4Name.innerHTML = carsInfo[1].carName;
                card4Description.innerHTML = carsInfo[1].carModel;
                card4Price.innerHTML = carsInfo[1].carGin;
             } else if (i === 4) {
+               countNum++;
                card5Img.src = carsInfo[1].carImg;
                card5Name.innerHTML = carsInfo[1].carName;
                card5Description.innerHTML = carsInfo[1].carModel;
                card5Price.innerHTML = carsInfo[1].carGin;
             } else if(i === 5) {
+               countNum++;
                card6Img.src = carsInfo[1].carImg;
                card6Name.innerHTML = carsInfo[1].carName;
                card6Description.innerHTML = carsInfo[1].carModel;
@@ -199,31 +211,37 @@ audiIcon.addEventListener('click', () => {
         const val = cardArray[i];
         if(val.style.display !== 'flex') {
             if (i === 0) {
+               countNum++;
                card1Img.src = carsInfo[2].carImg;
                card1Name.innerHTML = carsInfo[2].carName;
                card1Description.innerHTML = carsInfo[2].carModel;
                card1Price.innerHTML = carsInfo[2].carGin;
             } else if (i === 1){
+               countNum++;
                card2Img.src = carsInfo[2].carImg;
                card2Name.innerHTML = carsInfo[2].carName;
                card2Description.innerHTML = carsInfo[2].carModel;
                card2Price.innerHTML = carsInfo[2].carGin;
             } else if(i === 2) {
+               countNum++;
                card3Img.src = carsInfo[2].carImg;
                card3Name.innerHTML = carsInfo[2].carName;
                card3Description.innerHTML = carsInfo[2].carModel;
                card3Price.innerHTML = carsInfo[2].carGin;
             } else if (i === 3) {
+               countNum++;
                card4Img.src = carsInfo[2].carImg;
                card4Name.innerHTML = carsInfo[2].carName;
                card4Description.innerHTML = carsInfo[2].carModel;
                card4Price.innerHTML = carsInfo[2].carGin;
             } else if (i === 4) {
+               countNum++;
                card5Img.src = carsInfo[2].carImg;
                card5Name.innerHTML = carsInfo[2].carName;
                card5Description.innerHTML = carsInfo[2].carModel;
                card5Price.innerHTML = carsInfo[2].carGin;
             } else if(i === 5) {
+               countNum++;
                card6Img.src = carsInfo[2].carImg;
                card6Name.innerHTML = carsInfo[2].carName;
                card6Description.innerHTML = carsInfo[2].carModel;
@@ -242,31 +260,37 @@ porsheIcon.addEventListener('click', () => {
         const val = cardArray[i];
         if(val.style.display !== 'flex') {
             if (i === 0) {
+               countNum++;
                card1Img.src = carsInfo[3].carImg;
                card1Name.innerHTML = carsInfo[3].carName;
                card1Description.innerHTML = carsInfo[3].carModel;
                card1Price.innerHTML = carsInfo[3].carGin;
             } else if (i === 1){
+               countNum++;
                card2Img.src = carsInfo[3].carImg;
                card2Name.innerHTML = carsInfo[3].carName;
                card2Description.innerHTML = carsInfo[3].carModel;
                card2Price.innerHTML = carsInfo[3].carGin;
             } else if(i === 2) {
+               countNum++;
                card3Img.src = carsInfo[3].carImg;
                card3Name.innerHTML = carsInfo[3].carName;
                card3Description.innerHTML = carsInfo[3].carModel;
                card3Price.innerHTML = carsInfo[3].carGin;
             } else if (i === 3) {
+               countNum++;
                card4Img.src = carsInfo[3].carImg;
                card4Name.innerHTML = carsInfo[3].carName;
                card4Description.innerHTML = carsInfo[3].carModel;
                card4Price.innerHTML = carsInfo[3].carGin;
             } else if (i === 4) {
+               countNum++;
                card5Img.src = carsInfo[3].carImg;
                card5Name.innerHTML = carsInfo[3].carName;
                card5Description.innerHTML = carsInfo[3].carModel;
                card5Price.innerHTML = carsInfo[3].carGin;
             } else if(i === 5) {
+               countNum++;
                card6Img.src = carsInfo[3].carImg;
                card6Name.innerHTML = carsInfo[3].carName;
                card6Description.innerHTML = carsInfo[3].carModel;
@@ -284,31 +308,37 @@ porshe2Icon.addEventListener('click', () => {
         const val = cardArray[i];
         if(val.style.display !== 'flex') {
             if (i === 0) {
+               countNum++;
                card1Img.src = carsInfo[4].carImg;
                card1Name.innerHTML = carsInfo[4].carName;
                card1Description.innerHTML = carsInfo[4].carModel;
                card1Price.innerHTML = carsInfo[4].carGin;
             } else if (i === 1){
+               countNum++;
                card2Img.src = carsInfo[4].carImg;
                card2Name.innerHTML = carsInfo[4].carName;
                card2Description.innerHTML = carsInfo[4].carModel;
                card2Price.innerHTML = carsInfo[4].carGin;
             } else if(i === 2) {
+               countNum++;
                card3Img.src = carsInfo[4].carImg;
                card3Name.innerHTML = carsInfo[4].carName;
                card3Description.innerHTML = carsInfo[4].carModel;
                card3Price.innerHTML = carsInfo[4].carGin;
             } else if (i === 3) {
+               countNum++;
                card4Img.src = carsInfo[4].carImg;
                card4Name.innerHTML = carsInfo[4].carName;
                card4Description.innerHTML = carsInfo[4].carModel;
                card4Price.innerHTML = carsInfo[4].carGin;
             } else if (i === 4) {
+               countNum++;
                card5Img.src = carsInfo[4].carImg;
                card5Name.innerHTML = carsInfo[4].carName;
                card5Description.innerHTML = carsInfo[4].carModel;
                card5Price.innerHTML = carsInfo[4].carGin;
             } else if(i === 5) {
+               countNum++;
                card6Img.src = carsInfo[4].carImg;
                card6Name.innerHTML = carsInfo[4].carName;
                card6Description.innerHTML = carsInfo[4].carModel;
@@ -326,31 +356,37 @@ tesla6Icon.addEventListener('click', () => {
         const val = cardArray[i];
         if(val.style.display !== 'flex') {
             if (i === 0) {
+               countNum++;
                card1Img.src = carsInfo[5].carImg;
                card1Name.innerHTML = carsInfo[5].carName;
                card1Description.innerHTML = carsInfo[5].carModel;
                card1Price.innerHTML = carsInfo[5].carGin;
             } else if (i === 1){
+               countNum++;
                card2Img.src = carsInfo[5].carImg;
                card2Name.innerHTML = carsInfo[5].carName;
                card2Description.innerHTML = carsInfo[5].carModel;
                card2Price.innerHTML = carsInfo[5].carGin;
             } else if(i === 2) {
+               countNum++;
                card3Img.src = carsInfo[5].carImg;
                card3Name.innerHTML = carsInfo[5].carName;
                card3Description.innerHTML = carsInfo[5].carModel;
                card3Price.innerHTML = carsInfo[5].carGin;
             } else if (i === 3) {
+               countNum++;
                card4Img.src = carsInfo[5].carImg;
                card4Name.innerHTML = carsInfo[5].carName;
                card4Description.innerHTML = carsInfo[5].carModel;
                card4Price.innerHTML = carsInfo[5].carGin;
             } else if (i === 4) {
+               countNum++;
                card5Img.src = carsInfo[5].carImg;
                card5Name.innerHTML = carsInfo[5].carName;
                card5Description.innerHTML = carsInfo[5].carModel;
                card5Price.innerHTML = carsInfo[5].carGin;
             } else if(i === 5) {
+               countNum++;
                card6Img.src = carsInfo[5].carImg;
                card6Name.innerHTML = carsInfo[5].carName;
                card6Description.innerHTML = carsInfo[5].carModel;
@@ -425,7 +461,6 @@ contCards.forEach((val) => {
    let buyIcon = val.querySelector('.icons .cart');
    buyIcon.addEventListener('click', function() {
          if(countNum < cardArray.length) {
-            countNum++;
             count.innerText = countNum;
          }
    }) 
