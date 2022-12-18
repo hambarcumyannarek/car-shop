@@ -112,28 +112,40 @@ teslaXIcon.addEventListener('click', () => {
       const val = cardArray[i];
         if (val.style.display === 'flex') {
             if(i === 0) {
-               if (card1Description.innerHTML = carsInfo[0].carModel) {      
+               if (card1Description.innerHTML === carsInfo[0].carModel) {      
                   break;
+               } else {
+                  continue;
                }
             } else if(i === 1) {
-               if (card1Description.innerHTML = carsInfo[0].carModel) {
+               if (card2Description.innerHTML === carsInfo[0].carModel) {
                   break;
+               } else {
+                  continue;
                }
-            } else if(card1Description.innerHTML = carsInfo[0].carModel) {
-               if (card1Img.src === carsInfo[0].carImg) {
+            } else if(card3Description.innerHTML === carsInfo[0].carModel) {
+               if (card3Description.innerHTML === carsInfo[0].carModel) {
                   break;
+               } else {
+                  continue;
                }
             } else if(i === 3) {
-               if (card1Description.innerHTML = carsInfo[0].carModel) {
+               if (card4Description.innerHTML === carsInfo[0].carModel) {
                   break;
+               } else {
+                  continue;
                }
             }  else if(i === 4) {
-               if (card1Description.innerHTML = carsInfo[0].carModel) {
+               if (card5Description.innerHTML === carsInfo[0].carModel) {
                   break;
+               } else {
+                  continue;
                }
             }  else if(i === 5) {
-               if (card1Description.innerHTML = carsInfo[0].carModel) {
+               if (card6Description.innerHTML === carsInfo[0].carModel) {
                   break;
+               } else {
+                  continue;
                }
             }
         }
@@ -184,12 +196,52 @@ teslaXIcon.addEventListener('click', () => {
 })
 
 tesla3Icon.addEventListener('click', () => {
-    for (let i = 0; i < cardArray.length; i++) {
+   for (let i = 0; i < cardArray.length; i++) {
         const val = cardArray[i];
-        if(val.style.display !== 'flex') {
+        if (val.style.display === 'flex') {
+         if(i === 0) {
+            if (card1Description.innerHTML === carsInfo[1].carModel) {      
+               break;
+            } else{
+               continue;
+            }
+         } else if(i === 1) {
+            if (card2Description.innerHTML === carsInfo[1].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         } else if(i === 2) {
+            if (card3Description.innerHTML === carsInfo[1].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         } else if(i === 3) {
+            if (card4Description.innerHTML === carsInfo[1].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         }  else if(i === 4) {
+            if (card5Description.innerHTML === carsInfo[1].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         }  else if(i === 5) {
+            if (card6Description.innerHTML === carsInfo[1].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         }
+     }
+        else if(val.style.display !== 'flex') {
             if (i === 0) {
-               card1Img.src = 
-               countNum++;carsInfo[1].carImg;
+               countNum++;
+               card1Img.src = carsInfo[1].carImg;
+               carsInfo[1].carImg;
                card1Name.innerHTML = carsInfo[1].carName;
                card1Description.innerHTML = carsInfo[1].carModel;
                card1Price.innerHTML = carsInfo[1].carGin;
@@ -235,7 +287,46 @@ tesla3Icon.addEventListener('click', () => {
 audiIcon.addEventListener('click', () => {
     for (let i = 0; i < cardArray.length; i++) {
         const val = cardArray[i];
-        if(val.style.display !== 'flex') {
+        if (val.style.display === 'flex') {
+         if(i === 0) {
+            if (card1Description.innerHTML === carsInfo[2].carModel) {      
+               break;
+            } else{
+               continue;
+            }
+         } else if(i === 1) {
+            if (card2Description.innerHTML === carsInfo[2].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         } else if(i === 2) {
+            if (card3Description.innerHTML === carsInfo[2].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         } else if(i === 3) {
+            if (card4Description.innerHTML === carsInfo[2].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         }  else if(i === 4) {
+            if (card5Description.innerHTML === carsInfo[2].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         }  else if(i === 5) {
+            if (card6Description.innerHTML === carsInfo[2].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         }
+     }
+        else if(val.style.display !== 'flex') {
             if (i === 0) {
                countNum++;
                card1Img.src = carsInfo[2].carImg;
@@ -284,7 +375,46 @@ audiIcon.addEventListener('click', () => {
 porsheIcon.addEventListener('click', () => {
     for (let i = 0; i < cardArray.length; i++) {
         const val = cardArray[i];
-        if(val.style.display !== 'flex') {
+        if (val.style.display === 'flex') {
+         if(i === 0) {
+            if (card1Description.innerHTML === carsInfo[3].carModel) {      
+               break;
+            } else{
+               continue;
+            }
+         } else if(i === 1) {
+            if (card2Description.innerHTML === carsInfo[3].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         } else if(i === 2) {
+            if (card3Description.innerHTML === carsInfo[3].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         } else if(i === 3) {
+            if (card4Description.innerHTML === carsInfo[3].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         }  else if(i === 4) {
+            if (card5Description.innerHTML === carsInfo[3].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         }  else if(i === 5) {
+            if (card6Description.innerHTML === carsInfo[3].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         }
+     }
+        else if(val.style.display !== 'flex') {
             if (i === 0) {
                countNum++;
                card1Img.src = carsInfo[3].carImg;
@@ -332,7 +462,46 @@ porsheIcon.addEventListener('click', () => {
 porshe2Icon.addEventListener('click', () => {
     for (let i = 0; i < cardArray.length; i++) {
         const val = cardArray[i];
-        if(val.style.display !== 'flex') {
+        if (val.style.display === 'flex') {
+         if(i === 0) {
+            if (card1Description.innerHTML === carsInfo[4].carModel) {      
+               break;
+            } else{
+               continue;
+            }
+         } else if(i === 1) {
+            if (card2Description.innerHTML === carsInfo[4].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         } else if(i === 2) {
+            if (card3Description.innerHTML === carsInfo[4].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         } else if(i === 3) {
+            if (card4Description.innerHTML === carsInfo[4].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         }  else if(i === 4) {
+            if (card5Description.innerHTML === carsInfo[4].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         }  else if(i === 5) {
+            if (card6Description.innerHTML === carsInfo[4].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         }
+     }
+       else if(val.style.display !== 'flex') {
             if (i === 0) {
                countNum++;
                card1Img.src = carsInfo[4].carImg;
@@ -380,7 +549,46 @@ porshe2Icon.addEventListener('click', () => {
 tesla6Icon.addEventListener('click', () => {
     for (let i = 0; i < cardArray.length; i++) {
         const val = cardArray[i];
-        if(val.style.display !== 'flex') {
+        if (val.style.display === 'flex') {
+         if(i === 0) {
+            if (card1Description.innerHTML === carsInfo[5].carModel) {      
+               break;
+            } else{
+               continue;
+            }
+         } else if(i === 1) {
+            if (card2Description.innerHTML === carsInfo[5].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         } else if(i === 2) {
+            if (card3Description.innerHTML === carsInfo[5].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         } else if(i === 3) {
+            if (card4Description.innerHTML === carsInfo[5].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         }  else if(i === 4) {
+            if (card5Description.innerHTML === carsInfo[5].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         }  else if(i === 5) {
+            if (card6Description.innerHTML === carsInfo[5].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         }
+     }
+       else if(val.style.display !== 'flex') {
             if (i === 0) {
                countNum++;
                card1Img.src = carsInfo[5].carImg;
