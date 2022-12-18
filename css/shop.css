@@ -1285,10 +1285,12 @@ body
 }
 
 
-.cards > .card > .gin
+.cards > .card > #gin-box
 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     color: #fff;
-    font-size: 1.5em;
     font-weight: normal;
 }
 

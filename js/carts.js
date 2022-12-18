@@ -1,9 +1,3 @@
-//var priceTeslaX = require('./shotchik');
-// let a = ginTeslaX;
-// console.log(a); 
-
-const cartBtn = document.querySelector('.cartBtn');
-const shopping = document.querySelector('.shopping');
 
                 //            Shoping Cards
 const card1 = document.querySelector('.card1');
@@ -61,7 +55,6 @@ const card6Description = document.querySelector('#card6Description');
 
 
 
-
 const carsInfo = [
     {
         carName: 'Tesla',
@@ -111,27 +104,8 @@ const carsInfo = [
     },
 ]
 
-delete1.addEventListener("click", () => {
-   card1.style.display = "none";
-});
-delete2.addEventListener("click", () => {
-   card2.style.display = "none";
-});
-delete3.addEventListener("click", () => {
-   card3.style.display = "none";
-});
-delete4.addEventListener("click", () => {
-   card4.style.display = "none";
-});
-delete5.addEventListener("click", () => {
-   card5.style.display = "none";
-});
-delete6.addEventListener("click", () => {
-   card6.style.display = "none";
-});
 
 const cardArray = [card1,card2,card3,card4,card5,card6];
-
 
 
 teslaXIcon.addEventListener('click', () => {
@@ -391,24 +365,21 @@ tesla6Icon.addEventListener('click', () => {
 })
 
 
+
+/*----------- cart ----------- */
+
+const cartBtn = document.querySelector('.cartBtn');
+const shopping = document.querySelector('.shopping');
+
 cartBtn.addEventListener('click', function() {
     shopping.classList.toggle('active');
     document.body.style.overflowY = 'hidden';
 })
 
-function closeShoping() {
-    shopping.classList.remove('active');
-    document.body.style.overflowY = 'auto';
-}
-
-const shopHeaderClose = document.querySelector('.shop-header .close');
-const vse = document.querySelector('.shopping .vse');
-
-vse.addEventListener('click', closeShoping);
-shopHeaderClose.addEventListener('click', closeShoping);
 
 
 
+/*---------- like ----------- */
 
 const likeBtn = document.querySelector('.likeBtn');
 const likeBlank = document.querySelector('.likeBlank');
@@ -418,28 +389,38 @@ likeBtn.addEventListener('click', function() {
     document.body.style.overflowY = 'hidden';
 })
 
-function closeShoping2() {
-    likeBlank.classList.remove('active');
-    document.body.style.overflowY = 'auto';
-}
 
-const LshopHeaderClose = document.querySelector('.likeBlank-header .close');
-const Lvse = document.querySelector('.likeBlank .vse');
 
-Lvse.addEventListener('click', closeShoping2);
-LshopHeaderClose.addEventListener('click', closeShoping2);
+
+
+/*--------------  global-close   -------------- */
+
+const global = document.querySelectorAll('.globalSL');
+
+global.forEach((val) => {
+   let vse = val.querySelector('.globalSL .vse');
+   let shopHeaderClose = val.querySelector('.globalSL-header .close');
+
+   function close() {
+      val.classList.remove('active');
+      document.body.style.overflowY = 'auto';
+   }
+
+   [vse, shopHeaderClose].forEach((val2) => {
+      val2.addEventListener('click', close)
+   })
+})
+
+
+
+
+
+/*--------------  count  --------------*/
 
 const contCards = document.querySelectorAll('#addCont .card');
 const count = document.querySelector('.cartBtn .count');
 let countNum = 0; // count
-const deletes = document.querySelectorAll('.delete ion-icon');
 
-deletes.forEach((val) => {
-   val.addEventListener('click', () => {
-      countNum--;
-      count.innerText = countNum;
-   })
-})
 contCards.forEach((val) => {
    let buyIcon = val.querySelector('.icons .cart');
    buyIcon.addEventListener('click', function() {
@@ -451,71 +432,26 @@ contCards.forEach((val) => {
 })
 
 
-// const carsInfo = [
-//     [
-//         'Tesla',
-//         'Model X',
-//         'img/featured1.png',
-//         '$165,900', // ??? petq e lini numTeslaX
-//     ],
-
-
-//     [
-//         'Tesla',
-//         'Model 3',
-//         'img/featured2.png',
-//         '$135,900' // ??? petq e lini numTeslaX
-//     ],
-
-
-//     [
-//         'Audi',
-//         'E-Tron',
-//         'img/featured3.png',
-//         '$175,900' // ??? petq e lini numTeslaX
-//     ],
-
-
-//     [
-//          'Porsche',
-//          'Boxster 987',
-//          'img/featured4.png',
-//          '$124,900' // ??? petq e lini numTeslaX
-//     ],
-
-
-//     [
-//          'Porsche',
-//          'Panamera',
-//          'img/featured5.png',
-//          '$135,900' // ??? petq e lini numTeslaX
-//     ],
-
-
-//     [
-//          'Tesla',
-//          'Seria 6',
-//          'img/a..jpg',
-//          '$135,900' // ??? petq e lini numTeslaX
-//     ],
-// ]
 
 
 
-const shopMain = document.querySelector('.shop-main');
-const addCont = document.querySelectorAll('#addCont .card');
-let x = document.querySelector('.x')
+/*-----------    delete     ---------- */
 
-addCont.forEach((val) => {
-    let addBtn = val.querySelector('.addBtn');
-    // addBtn.addEventListener('click', function created() {
-    //     let card = document.createElement('div');
-    //     card.setAttribute('class', 'card');
-    //     shopMain.appendChild(card);
+const mainCards = document.querySelectorAll('.shop-main .card');
 
-    // })
+mainCards.forEach((val) => {
+   let carddelete = val.querySelector('.delete');
 
+   carddelete.addEventListener('click', function() {
+      val.style.display = 'none';
+   })
+
+   carddelete.addEventListener('click', () => {
+      countNum--;
+      count.innerText = countNum;
+   })
 })
+
 
 
 
