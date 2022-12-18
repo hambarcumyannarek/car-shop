@@ -107,11 +107,37 @@ const carsInfo = [
 
 const cardArray = [card1,card2,card3,card4,card5,card6];
 
-
 teslaXIcon.addEventListener('click', () => {
     for (let i = 0; i < cardArray.length; i++) {
-        const val = cardArray[i];
-        if(val.style.display !== 'flex') {
+      const val = cardArray[i];
+        if (val.style.display === 'flex') {
+            if(i === 0) {
+               if (card1Description.innerHTML = carsInfo[0].carModel) {      
+                  break;
+               }
+            } else if(i === 1) {
+               if (card1Description.innerHTML = carsInfo[0].carModel) {
+                  break;
+               }
+            } else if(card1Description.innerHTML = carsInfo[0].carModel) {
+               if (card1Img.src === carsInfo[0].carImg) {
+                  break;
+               }
+            } else if(i === 3) {
+               if (card1Description.innerHTML = carsInfo[0].carModel) {
+                  break;
+               }
+            }  else if(i === 4) {
+               if (card1Description.innerHTML = carsInfo[0].carModel) {
+                  break;
+               }
+            }  else if(i === 5) {
+               if (card1Description.innerHTML = carsInfo[0].carModel) {
+                  break;
+               }
+            }
+        }
+       else if(val.style.display !== 'flex') {
             if (i === 0) {
                card1Img.src = carsInfo[0].carImg;
                card1Name.innerHTML = carsInfo[0].carName;
