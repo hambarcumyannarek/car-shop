@@ -195,17 +195,6 @@ body
     filter: blur(70px);
 }
 
-.shopping > .shopping-container {
-    position: absolute;
-    top: 0;
-    left: -100%;
-    transition: all 0.5s 0.3s;
-}
-
-.shopping.active > .shopping-container {
-    left: 0%;
-}
-
 .likeBlank > .likeBlank-container {
     position: absolute;
     top: 0;
@@ -466,6 +455,88 @@ body
 /* .shopping > .shopping-container > .shop-main > .card {
     display: none;
 } */
+
+
+
+.shopping > .shopping-container {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: all 0.5s 0.3s;
+}
+
+.shopping.active > .shopping-container {
+    left: 0%;
+}
+
+.shopping > .shopping-container > .shop-main > .card > .img {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.shopping > .shopping-container > .shop-main > .card > .img > .top {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.shopping > .shopping-container > .shop-main > .card > .img > .top > h3 {
+    font-size: 1.6em;
+    color: #fff;
+    font-weight: normal;
+}
+
+.shopping > .shopping-container > .shop-main > .card > .img > .top > p {
+    color: #ccc;
+    font-weight: normal;
+}
+
+.shopping > .shopping-container > .shop-main > .card > .card-right {
+    gap: 23px;
+}
+
+.shopping > .shopping-container > .shop-main > .card > .card-right > #gin-box {
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #fff;
+}
+
+
+.shotchik {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.shotchik > p {
+    color: #fff;
+    font-size: 1.1em;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shotchik > button {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(52,103,193);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.2em;
+    border: 2px double transparent;
+    transition: 0.5s;
+}
+.shotchik > button:hover{
+    background-color: #fff;
+    color: rgb(52,103,193);
+}
+
 
 .responsiv-menu
 {
@@ -1030,40 +1101,7 @@ body
     bottom: 0;
     left: 0;
 }
-.shotchik {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-}
-.shotchik > p {
-    color: #fff;
-    font-size: 1.1em;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.shotchik > button {
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(52,103,193);
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 1.2em;
-    border: 2px double transparent;
-    transition: 0.5s;
-}
-.shotchik > button:hover{
-    background-color: #fff;
-    color: rgb(52,103,193);
-    border: 2px double rgb(52,103,193);
-}
+
 .cont > .card3
 {
     position: absolute;

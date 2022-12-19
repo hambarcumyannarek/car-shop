@@ -30,7 +30,7 @@
                 
                 const card1Img = document.querySelector('#card1Img');
                 const card1Name = document.querySelector('#card1Name');
-                const card1Price = document.querySelector('#card1Price');
+                const card1Price = document.querySelector('#bo');
                 const card1Description = document.querySelector('#card1Description');
                 const card2Img = document.querySelector('#card2Img');
                 const card2Name = document.querySelector('#card2Name');
@@ -60,7 +60,7 @@
                         carName: 'Tesla',
                         carModel: 'Model X',
                         carImg: 'img/featured1.png',
-                        carGin: '$165,900', // ??? petq e lini numTeslaX
+                        carGin: 165900, // ??? petq e lini numTeslaX
                     },
                 
                 
@@ -68,7 +68,7 @@
                         carName: 'Tesla',
                         carModel: 'Model 3',
                         carImg: 'img/featured2.png',
-                        carGin: '$135,900' // ??? petq e lini numTeslaX
+                        carGin: 135900// ??? petq e lini numTeslaX
                     },
                 
                 
@@ -76,7 +76,7 @@
                         carName: 'Audi',
                         carModel: 'E-Tron',
                         carImg: 'img/featured3.png',
-                        carGin: '$175,900' // ??? petq e lini numTeslaX
+                        carGin: 175900 // ??? petq e lini numTeslaX
                     },
                 
                 
@@ -84,7 +84,7 @@
                         carName: 'Porsche',
                         carModel: 'Boxster 987',
                         carImg: 'img/featured4.png',
-                        carGin: '$124,900' // ??? petq e lini numTeslaX
+                        carGin: 124900 // ??? petq e lini numTeslaX
                     },
                 
                 
@@ -92,7 +92,7 @@
                         carName: 'Porsche',
                         carModel: 'Panamera',
                         carImg: 'img/featured5.png',
-                        carGin: '$135,900' // ??? petq e lini numTeslaX
+                        carGin: 135900 // ??? petq e lini numTeslaX
                     },
                 
                 
@@ -100,7 +100,7 @@
                         carName: 'Tesla',
                         carModel: 'Seria 6',
                         carImg: 'img/a..jpg',
-                        carGin: '$135,900' // ??? petq e lini numTeslaX
+                        carGin: 135900 // ??? petq e lini numTeslaX
                     },
                 ]
                 
@@ -439,7 +439,10 @@
                 
                 const mainCards = document.querySelectorAll('.shop-main .card');
                 
+
+
                 mainCards.forEach((val) => {
+                  console.log(carsInfo.carGin);
                    let carddelete = val.querySelector('.delete');
                 
                    carddelete.addEventListener('click', function() {
@@ -450,37 +453,27 @@
                       countNum--;
                       count.innerText = countNum;
                    })
+
+                   let pluse = val.querySelector('.pluse');
+                   let minus = val.querySelector('.minus');
+                   let qanak = val.querySelector('.qanak');
+                  //  let carGin = carsInfo[val.index].carGin
+                   
+                   pluse.addEventListener('click', function() {
+                       let apranqiCount = Number(qanak.innerText);
+                       apranqiCount++;
+                       carsInfo.carGin.innerText = numGin * apranqiCount;
+                       qanak.innerText = apranqiCount;
+                   })
+
+                   minus.addEventListener('click', function() {
+                       let apranqiCount = Number(qanak.innerText);
+
+                       if(apranqiCount !== 1) {
+                           apranqiCount--;
+                           carsInfo.carGin.innerText = numGin * apranqiCount;
+                           qanak.innerText = apranqiCount;
+                       }
+                   })
                 })
                 
-                                
-
-const cards = document.querySelectorAll('#addCont .card');
-
-cards.forEach((val) => {
-    let pluse = val.querySelector('.shotchik .pluse');
-    let minus = val.querySelector('.minus');
-    let qanak = val.querySelector('.qanak');
-    let gin = val.querySelector('.gin');
-    let numGin = Number(gin.innerText);
-
-    
-    pluse.addEventListener('click', function() {
-        let count = Number(qanak.innerText);
-        count++;
-        gin.innerText = numGin * count;
-        qanak.innerText = count;
-    })
-
-    minus.addEventListener('click', function() {
-        let count = Number(qanak.innerText);
-
-        if(count !== 1) {
-            count--;
-            gin.innerText =  numGin * count;
-            qanak.innerText = count;
-        }
-    })
-
-})
-
-
