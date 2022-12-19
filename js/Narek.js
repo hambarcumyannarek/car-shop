@@ -54,55 +54,56 @@
                 const card6Description = document.querySelector('#card6Description');
                 
                 
-                
+
                 const carsInfo = [
-                    {
-                        carName: 'Tesla',
-                        carModel: 'Model X',
-                        carImg: 'img/featured1.png',
-                        carGin: 165900, // ??? petq e lini numTeslaX
-                    },
-                
-                
-                    {
-                        carName: 'Tesla',
-                        carModel: 'Model 3',
-                        carImg: 'img/featured2.png',
-                        carGin: 135900// ??? petq e lini numTeslaX
-                    },
-                
-                
-                    {
-                        carName: 'Audi',
-                        carModel: 'E-Tron',
-                        carImg: 'img/featured3.png',
-                        carGin: 175900 // ??? petq e lini numTeslaX
-                    },
-                
-                
-                    {
-                        carName: 'Porsche',
-                        carModel: 'Boxster 987',
-                        carImg: 'img/featured4.png',
-                        carGin: 124900 // ??? petq e lini numTeslaX
-                    },
-                
-                
-                    {
-                        carName: 'Porsche',
-                        carModel: 'Panamera',
-                        carImg: 'img/featured5.png',
-                        carGin: 135900 // ??? petq e lini numTeslaX
-                    },
-                
-                
-                    {
-                        carName: 'Tesla',
-                        carModel: 'Seria 6',
-                        carImg: 'img/a..jpg',
-                        carGin: 135900 // ??? petq e lini numTeslaX
-                    },
-                ]
+                  {
+                      carName: 'Tesla',
+                      carModel: 'Model X',
+                      carImg: 'img/featured1.png',
+                      carGin: '$165,900', // ??? petq e lini numTeslaX
+                  },
+              
+              
+                  {
+                      carName: 'Tesla',
+                      carModel: 'Model 3',
+                      carImg: 'img/featured2.png',
+                      carGin: '$135,900' // ??? petq e lini numTeslaX
+                  },
+              
+              
+                  {
+                      carName: 'Audi',
+                      carModel: 'E-Tron',
+                      carImg: 'img/featured3.png',
+                      carGin: '$175,900' // ??? petq e lini numTeslaX
+                  },
+              
+              
+                  {
+                      carName: 'Porsche',
+                      carModel: 'Boxster 987',
+                      carImg: 'img/featured4.png',
+                      carGin: '$124,900' // ??? petq e lini numTeslaX
+                  },
+              
+              
+                  {
+                      carName: 'Porsche',
+                      carModel: 'Panamera',
+                      carImg: 'img/featured5.png',
+                      carGin: '$135,900' // ??? petq e lini numTeslaX
+                  },
+              
+              
+                  {
+                      carName: 'Tesla',
+                      carModel: 'Seria 6',
+                      carImg: 'img/a..jpg',
+                      carGin: '$135,900' // ??? petq e lini numTeslaX
+                  },
+              ]
+              
                 
                 
                 const cardArray = [card1,card2,card3,card4,card5,card6];
