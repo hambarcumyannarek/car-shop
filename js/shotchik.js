@@ -160,7 +160,7 @@
 
 
 const cards = document.querySelectorAll('#addCont .card');
-
+let verjnakanQanak = 0;
 cards.forEach((val) => {
     let pluse = val.querySelector('.shotchik .pluse');
     let minus = val.querySelector('.minus');
@@ -170,19 +170,22 @@ cards.forEach((val) => {
 
     
     pluse.addEventListener('click', function() {
-        let count = Number(qanak.innerText);
-        count++;
-        gin.innerText = numGin * count;
-        qanak.innerText = count;
+        let ShotchikCount = Number(qanak.innerText);
+        ShotchikCount++;
+        gin.innerText = numGin * ShotchikCount;
+        qanak.innerText = ShotchikCount;
+        verjnakanQanak = qanak.innerText;
+        alert(verjnakanQanak);
     })
 
     minus.addEventListener('click', function() {
-        let count = Number(qanak.innerText);
+        let ShotchikCount = Number(qanak.innerText);
 
-        if(count !== 1) {
-            count--;
-            gin.innerText =  numGin * count;
-            qanak.innerText = count;
+        if(ShotchikCount !== 1) {
+            ShotchikCount--;
+            gin.innerText =  numGin * ShotchikCount;
+            qanak.innerText = ShotchikCount;
+            verjnakanQanak = qanak.innerText;
         }
     })
 

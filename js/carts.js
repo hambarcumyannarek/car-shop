@@ -1,5 +1,5 @@
 
-                //            Shoping Cards
+//            Shoping Cards
 const card1 = document.querySelector('.card1');
 const card2 = document.querySelector('.card2');
 const card3 = document.querySelector('.card3');
@@ -15,7 +15,7 @@ const delete3 = document.querySelector('#delete3');
 const delete4 = document.querySelector('#delete4');
 const delete5 = document.querySelector('#delete5');
 const delete6 = document.querySelector('#delete6');
-                //             Icons
+//             Icons
 
 
 const teslaXIcon = document.querySelector('#TeslaXIcon');
@@ -26,7 +26,7 @@ const porshe2Icon = document.querySelector('#porshe2Icon');
 const tesla6Icon = document.querySelector('#tesla6Icon');
 
 
-                //              Shoping Cards Parameters
+//              Shoping Cards Parameters
 
 const card1Img = document.querySelector('#card1Img');
 const card1Name = document.querySelector('#card1Name');
@@ -56,544 +56,617 @@ const card6Description = document.querySelector('#card6Description');
 
 
 const carsInfo = [
-    {
-        carName: 'Tesla',
-        carModel: 'Model X',
-        carImg: 'img/featured1.png',
-        carGin: '$165,900', // ??? petq e lini numTeslaX
-    },
+   {
+      carName: 'Tesla',
+      carModel: 'Model X',
+      carImg: 'img/featured1.png',
+      carGin: 165900, // ??? petq e lini numTeslaX
+   },
 
 
-    {
-        carName: 'Tesla',
-        carModel: 'Model 3',
-        carImg: 'img/featured2.png',
-        carGin: '$135,900' // ??? petq e lini numTeslaX
-    },
+   {
+      carName: 'Tesla',
+      carModel: 'Model 3',
+      carImg: 'img/featured2.png',
+      carGin: 135900 // ??? petq e lini numTeslaX
+   },
 
 
-    {
-        carName: 'Audi',
-        carModel: 'E-Tron',
-        carImg: 'img/featured3.png',
-        carGin: '$175,900' // ??? petq e lini numTeslaX
-    },
+   {
+      carName: 'Audi',
+      carModel: 'E-Tron',
+      carImg: 'img/featured3.png',
+      carGin: 175900 // ??? petq e lini numTeslaX
+   },
 
 
-    {
-        carName: 'Porsche',
-        carModel: 'Boxster 987',
-        carImg: 'img/featured4.png',
-        carGin: '$124,900' // ??? petq e lini numTeslaX
-    },
+   {
+      carName: 'Porsche',
+      carModel: 'Boxster 987',
+      carImg: 'img/featured4.png',
+      carGin: 124900 // ??? petq e lini numTeslaX
+   },
 
 
-    {
-        carName: 'Porsche',
-        carModel: 'Panamera',
-        carImg: 'img/featured5.png',
-        carGin: '$135,900' // ??? petq e lini numTeslaX
-    },
+   {
+      carName: 'Porsche',
+      carModel: 'Panamera',
+      carImg: 'img/featured5.png',
+      carGin: 135900 // ??? petq e lini numTeslaX
+   },
 
 
-    {
-        carName: 'Tesla',
-        carModel: 'Seria 6',
-        carImg: 'img/a..jpg',
-        carGin: '$135,900' // ??? petq e lini numTeslaX
-    },
+   {
+      carName: 'Tesla',
+      carModel: 'Seria 6',
+      carImg: 'img/a..jpg',
+      carGin: 135900 // ??? petq e lini numTeslaX
+   },
 ]
 
 
-const cardArray = [card1,card2,card3,card4,card5,card6];
+const cardArray = [card1, card2, card3, card4, card5, card6];
 
 
 teslaXIcon.addEventListener('click', () => {
-    for (let i = 0; i < cardArray.length; i++) {
-        const val = cardArray[i];
-        if(val.style.display !== 'flex') {
-            if (i === 0) {
-               countNum++;
-               card1Img.src = carsInfo[0].carImg;
-               card1Name.innerHTML = carsInfo[0].carName;
-               card1Description.innerHTML = carsInfo[0].carModel;
-               card1Price.innerHTML = carsInfo[0].carGin;
-            } else if (i === 1){
-               countNum++;
-               card2Img.src = carsInfo[0].carImg;
-               card2Name.innerHTML = carsInfo[0].carName;
-               card2Description.innerHTML = carsInfo[0].carModel;
-               card2Price.innerHTML = carsInfo[0].carGin;
-            } else if(i === 2) {
-               countNum++;
-               card3Img.src = carsInfo[0].carImg;
-               card3Name.innerHTML = carsInfo[0].carName;
-               card3Description.innerHTML = carsInfo[0].carModel;
-               card3Price.innerHTML = carsInfo[0].carGin;
-            } else if (i === 3) {
-               countNum++;
-               card4Img.src = carsInfo[0].carImg;
-               card4Name.innerHTML = carsInfo[0].carName;
-               card4Description.innerHTML = carsInfo[0].carModel;
-               card4Price.innerHTML = carsInfo[0].carGin;
-            } else if (i === 4) {
-               countNum++;
-               card5Img.src = carsInfo[0].carImg;
-               card5Name.innerHTML = carsInfo[0].carName;
-               card5Description.innerHTML = carsInfo[0].carModel;
-               card5Price.innerHTML = carsInfo[0].carGin;
-            } else if(i === 5) {
-               countNum++;
-               card6Img.src = carsInfo[0].carImg;
-               card6Name.innerHTML = carsInfo[0].carName;
-               card6Description.innerHTML = carsInfo[0].carModel;
-               card6Price.innerHTML = carsInfo[0].carGin;
+   for (let i = 0; i < cardArray.length; i++) {
+      const val = cardArray[i];
+      if (val.style.display === 'flex') {
+         if (i === 0) {
+            if (card1Description.innerHTML === carsInfo[0].carModel) {
+               break;
+            } else {
+               continue;
             }
-            val.style.display = 'flex';
-    
-            break;
-            // console.log(val + " " + i);
-        }
-    }
+         } else if (i === 1) {
+            if (card2Description.innerHTML === carsInfo[0].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         } else if (i === 2) {
+            if (card3Description.innerHTML === carsInfo[0].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         } else if (i === 3) {
+            if (card4Description.innerHTML === carsInfo[0].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         } else if (i === 4) {
+            if (card5Description.innerHTML === carsInfo[0].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         } else if (i === 5) {
+            if (card6Description.innerHTML === carsInfo[0].carModel) {
+               break;
+            } else {
+               continue;
+            }
+         }
+      }
+      else if (val.style.display !== 'flex') {
+         if (i === 0) {
+            countNum++;
+            card1Img.src = carsInfo[0].carImg;
+            card1Name.innerHTML = carsInfo[0].carName;
+            card1Description.innerHTML = carsInfo[0].carModel;
+            card1Price.innerHTML = "$" + (verjnakanQanak * carsInfo[0].carGin);
+            verjnakanQanak = 1;
+         } else if (i === 1) {
+            countNum++;
+            card2Img.src = carsInfo[0].carImg;
+            card2Name.innerHTML = carsInfo[0].carName;
+            card2Description.innerHTML = carsInfo[0].carModel;
+            card2Price.innerHTML = "$" + (verjnakanQanak * carsInfo[0].carGin);
+            verjnakanQanak = 1;
+         } else if (i === 2) {
+            countNum++;
+            card3Img.src = carsInfo[0].carImg;
+            card3Name.innerHTML = carsInfo[0].carName;
+            card3Description.innerHTML = carsInfo[0].carModel;
+            card3Price.innerHTML = "$" + (verjnakanQanak * carsInfo[0].carGin);
+            verjnakanQanak = 1;
+         } else if (i === 3) {
+            countNum++;
+            card4Img.src = carsInfo[0].carImg;
+            card4Name.innerHTML = carsInfo[0].carName;
+            card4Description.innerHTML = carsInfo[0].carModel;
+            card4Price.innerHTML = "$" + (verjnakanQanak * carsInfo[0].carGin);
+            verjnakanQanak = 1;
+         } else if (i === 4) {
+            countNum++;
+            card5Img.src = carsInfo[0].carImg;
+            card5Name.innerHTML = carsInfo[0].carName;
+            card5Description.innerHTML = carsInfo[0].carModel;
+            card5Price.innerHTML = "$" + (verjnakanQanak * carsInfo[0].carGin);
+            verjnakanQanak = 1;
+         } else if (i === 5) {
+            countNum++;
+            card6Img.src = carsInfo[0].carImg;
+            card6Name.innerHTML = carsInfo[0].carName;
+            card6Description.innerHTML = carsInfo[0].carModel;
+            card6Price.innerHTML = "$" + (verjnakanQanak * carsInfo[0].carGin);
+         }
+         val.style.display = 'flex';
+
+         break;
+         // console.log(val + " " + i);
+      }
+   }
 })
 
 tesla3Icon.addEventListener('click', () => {
    for (let i = 0; i < cardArray.length; i++) {
-        const val = cardArray[i];
-        if (val.style.display === 'flex') {
-         if(i === 0) {
-            if (card1Description.innerHTML === carsInfo[1].carModel) {      
+      const val = cardArray[i];
+      if (val.style.display === 'flex') {
+         if (i === 0) {
+            if (card1Description.innerHTML === carsInfo[1].carModel) {
                break;
-            } else{
+            } else {
                continue;
             }
-         } else if(i === 1) {
+         } else if (i === 1) {
             if (card2Description.innerHTML === carsInfo[1].carModel) {
                break;
             } else {
                continue;
             }
-         } else if(i === 2) {
+         } else if (i === 2) {
             if (card3Description.innerHTML === carsInfo[1].carModel) {
                break;
             } else {
                continue;
             }
-         } else if(i === 3) {
+         } else if (i === 3) {
             if (card4Description.innerHTML === carsInfo[1].carModel) {
                break;
             } else {
                continue;
             }
-         }  else if(i === 4) {
+         } else if (i === 4) {
             if (card5Description.innerHTML === carsInfo[1].carModel) {
                break;
             } else {
                continue;
             }
-         }  else if(i === 5) {
+         } else if (i === 5) {
             if (card6Description.innerHTML === carsInfo[1].carModel) {
                break;
             } else {
                continue;
             }
          }
-     }
-        else if(val.style.display !== 'flex') {
-            if (i === 0) {
-               countNum++;
-               card1Img.src = carsInfo[1].carImg;
-               carsInfo[1].carImg;
-               card1Name.innerHTML = carsInfo[1].carName;
-               card1Description.innerHTML = carsInfo[1].carModel;
-               card1Price.innerHTML = carsInfo[1].carGin;
-            } else if (i === 1){
-               countNum++;
-               card2Img.src = carsInfo[1].carImg;
-               card2Name.innerHTML = carsInfo[1].carName;
-               card2Description.innerHTML = carsInfo[1].carModel;
-               card2Price.innerHTML = carsInfo[1].carGin;
-            } else if(i === 2) {
-               countNum++;
-               card3Img.src = carsInfo[1].carImg;
-               card3Name.innerHTML = carsInfo[1].carName;
-               card3Description.innerHTML = carsInfo[1].carModel;
-               card3Price.innerHTML = carsInfo[1].carGin;
-            } else if (i === 3) {
-               countNum++;
-               card4Img.src = carsInfo[1].carImg;
-               card4Name.innerHTML = carsInfo[1].carName;
-               card4Description.innerHTML = carsInfo[1].carModel;
-               card4Price.innerHTML = carsInfo[1].carGin;
-            } else if (i === 4) {
-               countNum++;
-               card5Img.src = carsInfo[1].carImg;
-               card5Name.innerHTML = carsInfo[1].carName;
-               card5Description.innerHTML = carsInfo[1].carModel;
-               card5Price.innerHTML = carsInfo[1].carGin;
-            } else if(i === 5) {
-               countNum++;
-               card6Img.src = carsInfo[1].carImg;
-               card6Name.innerHTML = carsInfo[1].carName;
-               card6Description.innerHTML = carsInfo[1].carModel;
-               card6Price.innerHTML = carsInfo[1].carGin;
-            }
-            val.style.display = 'flex';
-    
-            break;
-            // console.log(val + " " + i);
-        }
-    }
+      }
+      else if (val.style.display !== 'flex') {
+         if (i === 0) {
+            countNum++;
+            card1Img.src = carsInfo[1].carImg;
+            carsInfo[1].carImg;
+            card1Name.innerHTML = carsInfo[1].carName;
+            card1Description.innerHTML = carsInfo[1].carModel;
+            card1Price.innerHTML = "$" + (verjnakanQanak * carsInfo[1].carGin);
+            varjnakanQanak = 1;
+         } else if (i === 1) {
+            countNum++;
+            card2Img.src = carsInfo[1].carImg;
+            card2Name.innerHTML = carsInfo[1].carName;
+            card2Description.innerHTML = carsInfo[1].carModel;
+            card2Price.innerHTML = "$" + (verjnakanQanak * carsInfo[1].carGin);
+            varjnakanQanak = 1;
+         } else if (i === 2) {
+            countNum++;
+            card3Img.src = carsInfo[1].carImg;
+            card3Name.innerHTML = carsInfo[1].carName;
+            card3Description.innerHTML = carsInfo[1].carModel;
+            card3Price.innerHTML = "$" + (verjnakanQanak * carsInfo[1].carGin);
+            varjnakanQanak = 1;
+         } else if (i === 3) {
+            countNum++;
+            card4Img.src = carsInfo[1].carImg;
+            card4Name.innerHTML = carsInfo[1].carName;
+            card4Description.innerHTML = carsInfo[1].carModel;
+            card4Price.innerHTML = "$" + (verjnakanQanak * carsInfo[1].carGin);
+            varjnakanQanak = 1;
+         } else if (i === 4) {
+            countNum++;
+            card5Img.src = carsInfo[1].carImg;
+            card5Name.innerHTML = carsInfo[1].carName;
+            card5Description.innerHTML = carsInfo[1].carModel;
+            card5Price.innerHTML = "$" + (verjnakanQanak * carsInfo[1].carGin);
+            varjnakanQanak = 1;
+         } else if (i === 5) {
+            countNum++;
+            card6Img.src = carsInfo[1].carImg;
+            card6Name.innerHTML = carsInfo[1].carName;
+            card6Description.innerHTML = carsInfo[1].carModel;
+            card6Price.innerHTML = "$" + (verjnakanQanak * carsInfo[1].carGin);
+            varjnakanQanak = 1;
+         }
+         val.style.display = 'flex';
+
+         break;
+         // console.log(val + " " + i);
+      }
+   }
 })
 
 audiIcon.addEventListener('click', () => {
-    for (let i = 0; i < cardArray.length; i++) {
-        const val = cardArray[i];
-        if (val.style.display === 'flex') {
-         if(i === 0) {
-            if (card1Description.innerHTML === carsInfo[2].carModel) {      
+   for (let i = 0; i < cardArray.length; i++) {
+      const val = cardArray[i];
+      if (val.style.display === 'flex') {
+         if (i === 0) {
+            if (card1Description.innerHTML === carsInfo[2].carModel) {
                break;
-            } else{
+            } else {
                continue;
             }
-         } else if(i === 1) {
+         } else if (i === 1) {
             if (card2Description.innerHTML === carsInfo[2].carModel) {
                break;
             } else {
                continue;
             }
-         } else if(i === 2) {
+         } else if (i === 2) {
             if (card3Description.innerHTML === carsInfo[2].carModel) {
                break;
             } else {
                continue;
             }
-         } else if(i === 3) {
+         } else if (i === 3) {
             if (card4Description.innerHTML === carsInfo[2].carModel) {
                break;
             } else {
                continue;
             }
-         }  else if(i === 4) {
+         } else if (i === 4) {
             if (card5Description.innerHTML === carsInfo[2].carModel) {
                break;
             } else {
                continue;
             }
-         }  else if(i === 5) {
+         } else if (i === 5) {
             if (card6Description.innerHTML === carsInfo[2].carModel) {
                break;
             } else {
                continue;
             }
          }
-     }
-        else if(val.style.display !== 'flex') {
-            if (i === 0) {
-               countNum++;
-               card1Img.src = carsInfo[2].carImg;
-               card1Name.innerHTML = carsInfo[2].carName;
-               card1Description.innerHTML = carsInfo[2].carModel;
-               card1Price.innerHTML = carsInfo[2].carGin;
-            } else if (i === 1){
-               countNum++;
-               card2Img.src = carsInfo[2].carImg;
-               card2Name.innerHTML = carsInfo[2].carName;
-               card2Description.innerHTML = carsInfo[2].carModel;
-               card2Price.innerHTML = carsInfo[2].carGin;
-            } else if(i === 2) {
-               countNum++;
-               card3Img.src = carsInfo[2].carImg;
-               card3Name.innerHTML = carsInfo[2].carName;
-               card3Description.innerHTML = carsInfo[2].carModel;
-               card3Price.innerHTML = carsInfo[2].carGin;
-            } else if (i === 3) {
-               countNum++;
-               card4Img.src = carsInfo[2].carImg;
-               card4Name.innerHTML = carsInfo[2].carName;
-               card4Description.innerHTML = carsInfo[2].carModel;
-               card4Price.innerHTML = carsInfo[2].carGin;
-            } else if (i === 4) {
-               countNum++;
-               card5Img.src = carsInfo[2].carImg;
-               card5Name.innerHTML = carsInfo[2].carName;
-               card5Description.innerHTML = carsInfo[2].carModel;
-               card5Price.innerHTML = carsInfo[2].carGin;
-            } else if(i === 5) {
-               countNum++;
-               card6Img.src = carsInfo[2].carImg;
-               card6Name.innerHTML = carsInfo[2].carName;
-               card6Description.innerHTML = carsInfo[2].carModel;
-               card6Price.innerHTML = carsInfo[2].carGin;
-            }
-            val.style.display = 'flex';
-    
-            break;
-            // console.log(val + " " + i);
-        }
-    }
+      }
+      else if (val.style.display !== 'flex') {
+         if (i === 0) {
+            countNum++;
+            card1Img.src = carsInfo[2].carImg;
+            card1Name.innerHTML = carsInfo[2].carName;
+            card1Description.innerHTML = carsInfo[2].carModel;
+            card1Price.innerHTML = "$" + (verjnakanQanak * carsInfo[2].carGin);
+            verjnakanQanak = 1;
+         } else if (i === 1) {
+            countNum++;
+            card2Img.src = carsInfo[2].carImg;
+            card2Name.innerHTML = carsInfo[2].carName;
+            card2Description.innerHTML = carsInfo[2].carModel;
+            card2Price.innerHTML = "$" + (verjnakanQanak * carsInfo[2].carGin);
+            verjnakanQanak = 1;
+         } else if (i === 2) {
+            countNum++;
+            card3Img.src = carsInfo[2].carImg;
+            card3Name.innerHTML = carsInfo[2].carName;
+            card3Description.innerHTML = carsInfo[2].carModel;
+            card3Price.innerHTML = "$" + (verjnakanQanak * carsInfo[2].carGin);
+            verjnakanQanak = 1;
+         } else if (i === 3) {
+            countNum++;
+            card4Img.src = carsInfo[2].carImg;
+            card4Name.innerHTML = carsInfo[2].carName;
+            card4Description.innerHTML = carsInfo[2].carModel;
+            card4Price.innerHTML = "$" + (verjnakanQanak * carsInfo[2].carGin);
+            verjnakanQanak = 1;
+         } else if (i === 4) {
+            countNum++;
+            card5Img.src = carsInfo[2].carImg;
+            card5Name.innerHTML = carsInfo[2].carName;
+            card5Description.innerHTML = carsInfo[2].carModel;
+            card5Price.innerHTML = "$" + (verjnakanQanak * carsInfo[2].carGin);
+            verjnakanQanak = 1;
+         } else if (i === 5) {
+            countNum++;
+            card6Img.src = carsInfo[2].carImg;
+            card6Name.innerHTML = carsInfo[2].carName;
+            card6Description.innerHTML = carsInfo[2].carModel;
+            card6Price.innerHTML = "$" + (verjnakanQanak * carsInfo[2].carGin);
+            verjnakanQanak = 1;
+         }
+         val.style.display = 'flex';
+
+         break;
+         // console.log(val + " " + i);
+      }
+   }
 })
 
 porsheIcon.addEventListener('click', () => {
-    for (let i = 0; i < cardArray.length; i++) {
-        const val = cardArray[i];
-        if (val.style.display === 'flex') {
-         if(i === 0) {
-            if (card1Description.innerHTML === carsInfo[3].carModel) {      
+   for (let i = 0; i < cardArray.length; i++) {
+      const val = cardArray[i];
+      if (val.style.display === 'flex') {
+         if (i === 0) {
+            if (card1Description.innerHTML === carsInfo[3].carModel) {
                break;
-            } else{
+            } else {
                continue;
             }
-         } else if(i === 1) {
+         } else if (i === 1) {
             if (card2Description.innerHTML === carsInfo[3].carModel) {
                break;
             } else {
                continue;
             }
-         } else if(i === 2) {
+         } else if (i === 2) {
             if (card3Description.innerHTML === carsInfo[3].carModel) {
                break;
             } else {
                continue;
             }
-         } else if(i === 3) {
+         } else if (i === 3) {
             if (card4Description.innerHTML === carsInfo[3].carModel) {
                break;
             } else {
                continue;
             }
-         }  else if(i === 4) {
+         } else if (i === 4) {
             if (card5Description.innerHTML === carsInfo[3].carModel) {
                break;
             } else {
                continue;
             }
-         }  else if(i === 5) {
+         } else if (i === 5) {
             if (card6Description.innerHTML === carsInfo[3].carModel) {
                break;
             } else {
                continue;
             }
          }
-     }
-        else if(val.style.display !== 'flex') {
-            if (i === 0) {
-               countNum++;
-               card1Img.src = carsInfo[3].carImg;
-               card1Name.innerHTML = carsInfo[3].carName;
-               card1Description.innerHTML = carsInfo[3].carModel;
-               card1Price.innerHTML = carsInfo[3].carGin;
-            } else if (i === 1){
-               countNum++;
-               card2Img.src = carsInfo[3].carImg;
-               card2Name.innerHTML = carsInfo[3].carName;
-               card2Description.innerHTML = carsInfo[3].carModel;
-               card2Price.innerHTML = carsInfo[3].carGin;
-            } else if(i === 2) {
-               countNum++;
-               card3Img.src = carsInfo[3].carImg;
-               card3Name.innerHTML = carsInfo[3].carName;
-               card3Description.innerHTML = carsInfo[3].carModel;
-               card3Price.innerHTML = carsInfo[3].carGin;
-            } else if (i === 3) {
-               countNum++;
-               card4Img.src = carsInfo[3].carImg;
-               card4Name.innerHTML = carsInfo[3].carName;
-               card4Description.innerHTML = carsInfo[3].carModel;
-               card4Price.innerHTML = carsInfo[3].carGin;
-            } else if (i === 4) {
-               countNum++;
-               card5Img.src = carsInfo[3].carImg;
-               card5Name.innerHTML = carsInfo[3].carName;
-               card5Description.innerHTML = carsInfo[3].carModel;
-               card5Price.innerHTML = carsInfo[3].carGin;
-            } else if(i === 5) {
-               countNum++;
-               card6Img.src = carsInfo[3].carImg;
-               card6Name.innerHTML = carsInfo[3].carName;
-               card6Description.innerHTML = carsInfo[3].carModel;
-               card6Price.innerHTML = carsInfo[3].carGin;
-            }
-            val.style.display = 'flex';
-    
-            break;
-            // console.log(val + " " + i);
-        }
-    }
+      }
+      else if (val.style.display !== 'flex') {
+         if (i === 0) {
+            countNum++;
+            card1Img.src = carsInfo[3].carImg;
+            card1Name.innerHTML = carsInfo[3].carName;
+            card1Description.innerHTML = carsInfo[3].carModel;
+            card1Price.innerHTML = "$" + (verjnakanQanak * carsInfo[3].carGin);
+            verjnakanQanak = 1;
+         } else if (i === 1) {
+            countNum++;
+            card2Img.src = carsInfo[3].carImg;
+            card2Name.innerHTML = carsInfo[3].carName;
+            card2Description.innerHTML = carsInfo[3].carModel;
+            card2Price.innerHTML = "$" + (verjnakanQanak * carsInfo[3].carGin);
+            verjnakanQanak = 1;
+         } else if (i === 2) {
+            countNum++;
+            card3Img.src = carsInfo[3].carImg;
+            card3Name.innerHTML = carsInfo[3].carName;
+            card3Description.innerHTML = carsInfo[3].carModel;
+            card3Price.innerHTML = "$" + (verjnakanQanak * carsInfo[3].carGin);
+            verjnakanQanak = 1;
+         } else if (i === 3) {
+            countNum++;
+            card4Img.src = carsInfo[3].carImg;
+            card4Name.innerHTML = carsInfo[3].carName;
+            card4Description.innerHTML = carsInfo[3].carModel;
+            card4Price.innerHTML = "$" + (verjnakanQanak * carsInfo[3].carGin);
+            verjnakanQanak = 1;
+         } else if (i === 4) {
+            countNum++;
+            card5Img.src = carsInfo[3].carImg;
+            card5Name.innerHTML = carsInfo[3].carName;
+            card5Description.innerHTML = carsInfo[3].carModel;
+            card5Price.innerHTML = "$" + (verjnakanQanak * carsInfo[3].carGin);
+            verjnakanQanak = 1;
+         } else if (i === 5) {
+            countNum++;
+            card6Img.src = carsInfo[3].carImg;
+            card6Name.innerHTML = carsInfo[3].carName;
+            card6Description.innerHTML = carsInfo[3].carModel;
+            card6Price.innerHTML = "$" + (verjnakanQanak * carsInfo[3].carGin);
+            verjnakanQanak = 1;
+         }
+         val.style.display = 'flex';
+
+         break;
+         // console.log(val + " " + i);
+      }
+   }
 })
 porshe2Icon.addEventListener('click', () => {
-    for (let i = 0; i < cardArray.length; i++) {
-        const val = cardArray[i];
-        if (val.style.display === 'flex') {
-         if(i === 0) {
-            if (card1Description.innerHTML === carsInfo[4].carModel) {      
+   for (let i = 0; i < cardArray.length; i++) {
+      const val = cardArray[i];
+      if (val.style.display === 'flex') {
+         if (i === 0) {
+            if (card1Description.innerHTML === carsInfo[4].carModel) {
                break;
-            } else{
+            } else {
                continue;
             }
-         } else if(i === 1) {
+         } else if (i === 1) {
             if (card2Description.innerHTML === carsInfo[4].carModel) {
                break;
             } else {
                continue;
             }
-         } else if(i === 2) {
+         } else if (i === 2) {
             if (card3Description.innerHTML === carsInfo[4].carModel) {
                break;
             } else {
                continue;
             }
-         } else if(i === 3) {
+         } else if (i === 3) {
             if (card4Description.innerHTML === carsInfo[4].carModel) {
                break;
             } else {
                continue;
             }
-         }  else if(i === 4) {
+         } else if (i === 4) {
             if (card5Description.innerHTML === carsInfo[4].carModel) {
                break;
             } else {
                continue;
             }
-         }  else if(i === 5) {
+         } else if (i === 5) {
             if (card6Description.innerHTML === carsInfo[4].carModel) {
                break;
             } else {
                continue;
             }
          }
-     }
-       else if(val.style.display !== 'flex') {
-            if (i === 0) {
-               countNum++;
-               card1Img.src = carsInfo[4].carImg;
-               card1Name.innerHTML = carsInfo[4].carName;
-               card1Description.innerHTML = carsInfo[4].carModel;
-               card1Price.innerHTML = carsInfo[4].carGin;
-            } else if (i === 1){
-               countNum++;
-               card2Img.src = carsInfo[4].carImg;
-               card2Name.innerHTML = carsInfo[4].carName;
-               card2Description.innerHTML = carsInfo[4].carModel;
-               card2Price.innerHTML = carsInfo[4].carGin;
-            } else if(i === 2) {
-               countNum++;
-               card3Img.src = carsInfo[4].carImg;
-               card3Name.innerHTML = carsInfo[4].carName;
-               card3Description.innerHTML = carsInfo[4].carModel;
-               card3Price.innerHTML = carsInfo[4].carGin;
-            } else if (i === 3) {
-               countNum++;
-               card4Img.src = carsInfo[4].carImg;
-               card4Name.innerHTML = carsInfo[4].carName;
-               card4Description.innerHTML = carsInfo[4].carModel;
-               card4Price.innerHTML = carsInfo[4].carGin;
-            } else if (i === 4) {
-               countNum++;
-               card5Img.src = carsInfo[4].carImg;
-               card5Name.innerHTML = carsInfo[4].carName;
-               card5Description.innerHTML = carsInfo[4].carModel;
-               card5Price.innerHTML = carsInfo[4].carGin;
-            } else if(i === 5) {
-               countNum++;
-               card6Img.src = carsInfo[4].carImg;
-               card6Name.innerHTML = carsInfo[4].carName;
-               card6Description.innerHTML = carsInfo[4].carModel;
-               card6Price.innerHTML = carsInfo[4].carGin;
-            }
-            val.style.display = 'flex';
-    
-            break;
-            // console.log(val + " " + i);
-        }
-    }
+      }
+      else if (val.style.display !== 'flex') {
+         if (i === 0) {
+            countNum++;
+            card1Img.src = carsInfo[4].carImg;
+            card1Name.innerHTML = carsInfo[4].carName;
+            card1Description.innerHTML = carsInfo[4].carModel;
+            card1Price.innerHTML = "$" + (verjnakanQanak * carsInfo[4].carGin);
+            verjnakanQanak = 1;
+         } else if (i === 1) {
+            countNum++;
+            card2Img.src = carsInfo[4].carImg;
+            card2Name.innerHTML = carsInfo[4].carName;
+            card2Description.innerHTML = carsInfo[4].carModel;
+            card2Price.innerHTML = "$" + (verjnakanQanak * carsInfo[4].carGin);
+            verjnakanQanak = 1;
+         } else if (i === 2) {
+            countNum++;
+            card3Img.src = carsInfo[4].carImg;
+            card3Name.innerHTML = carsInfo[4].carName;
+            card3Description.innerHTML = carsInfo[4].carModel;
+            card3Price.innerHTML = "$" + (verjnakanQanak * carsInfo[4].carGin);
+            verjnakanQanak = 1;
+         } else if (i === 3) {
+            countNum++;
+            card4Img.src = carsInfo[4].carImg;
+            card4Name.innerHTML = carsInfo[4].carName;
+            card4Description.innerHTML = carsInfo[4].carModel;
+            card4Price.innerHTML = "$" + (verjnakanQanak * carsInfo[4].carGin);
+            verjnakanQanak = 1;
+         } else if (i === 4) {
+            countNum++;
+            card5Img.src = carsInfo[4].carImg;
+            card5Name.innerHTML = carsInfo[4].carName;
+            card5Description.innerHTML = carsInfo[4].carModel;
+            card5Price.innerHTML = "$" + (verjnakanQanak * carsInfo[4].carGin);
+            verjnakanQanak = 1;
+         } else if (i === 5) {
+            countNum++;
+            card6Img.src = carsInfo[4].carImg;
+            card6Name.innerHTML = carsInfo[4].carName;
+            card6Description.innerHTML = carsInfo[4].carModel;
+            card6Price.innerHTML = "$" + (verjnakanQanak * carsInfo[4].carGin);
+            verjnakanQanak = 1;
+         }
+         val.style.display = 'flex';
+
+         break;
+         // console.log(val + " " + i);
+      }
+   }
 })
 tesla6Icon.addEventListener('click', () => {
-    for (let i = 0; i < cardArray.length; i++) {
-        const val = cardArray[i];
-        if (val.style.display === 'flex') {
-         if(i === 0) {
-            if (card1Description.innerHTML === carsInfo[5].carModel) {      
+   for (let i = 0; i < cardArray.length; i++) {
+      const val = cardArray[i];
+      if (val.style.display === 'flex') {
+         if (i === 0) {
+            if (card1Description.innerHTML === carsInfo[5].carModel) {
                break;
-            } else{
+            } else {
                continue;
             }
-         } else if(i === 1) {
+         } else if (i === 1) {
             if (card2Description.innerHTML === carsInfo[5].carModel) {
                break;
             } else {
                continue;
             }
-         } else if(i === 2) {
+         } else if (i === 2) {
             if (card3Description.innerHTML === carsInfo[5].carModel) {
                break;
             } else {
                continue;
             }
-         } else if(i === 3) {
+         } else if (i === 3) {
             if (card4Description.innerHTML === carsInfo[5].carModel) {
                break;
             } else {
                continue;
             }
-         }  else if(i === 4) {
+         } else if (i === 4) {
             if (card5Description.innerHTML === carsInfo[5].carModel) {
                break;
             } else {
                continue;
             }
-         }  else if(i === 5) {
+         } else if (i === 5) {
             if (card6Description.innerHTML === carsInfo[5].carModel) {
                break;
             } else {
                continue;
             }
          }
-     }
-       else if(val.style.display !== 'flex') {
-            if (i === 0) {
-               countNum++;
-               card1Img.src = carsInfo[5].carImg;
-               card1Name.innerHTML = carsInfo[5].carName;
-               card1Description.innerHTML = carsInfo[5].carModel;
-               card1Price.innerHTML = carsInfo[5].carGin;
-            } else if (i === 1){
-               countNum++;
-               card2Img.src = carsInfo[5].carImg;
-               card2Name.innerHTML = carsInfo[5].carName;
-               card2Description.innerHTML = carsInfo[5].carModel;
-               card2Price.innerHTML = carsInfo[5].carGin;
-            } else if(i === 2) {
-               countNum++;
-               card3Img.src = carsInfo[5].carImg;
-               card3Name.innerHTML = carsInfo[5].carName;
-               card3Description.innerHTML = carsInfo[5].carModel;
-               card3Price.innerHTML = carsInfo[5].carGin;
-            } else if (i === 3) {
-               countNum++;
-               card4Img.src = carsInfo[5].carImg;
-               card4Name.innerHTML = carsInfo[5].carName;
-               card4Description.innerHTML = carsInfo[5].carModel;
-               card4Price.innerHTML = carsInfo[5].carGin;
-            } else if (i === 4) {
-               countNum++;
-               card5Img.src = carsInfo[5].carImg;
-               card5Name.innerHTML = carsInfo[5].carName;
-               card5Description.innerHTML = carsInfo[5].carModel;
-               card5Price.innerHTML = carsInfo[5].carGin;
-            } else if(i === 5) {
-               countNum++;
-               card6Img.src = carsInfo[5].carImg;
-               card6Name.innerHTML = carsInfo[5].carName;
-               card6Description.innerHTML = carsInfo[5].carModel;
-               card6Price.innerHTML = carsInfo[5].carGin;
-            }
-            val.style.display = 'flex';
-    
-            break;
-            // console.log(val + " " + i);
-        }
-    }
+      }
+      else if (val.style.display !== 'flex') {
+         if (i === 0) {
+            countNum++;
+            card1Img.src = carsInfo[5].carImg;
+            card1Name.innerHTML = carsInfo[5].carName;
+            card1Description.innerHTML = carsInfo[5].carModel;
+            card1Price.innerHTML = "$" + (verjnakanQanak * carsInfo[5].carGin);
+         } else if (i === 1) {
+            countNum++;
+            card2Img.src = carsInfo[5].carImg;
+            card2Name.innerHTML = carsInfo[5].carName;
+            card2Description.innerHTML = carsInfo[5].carModel;
+            card2Price.innerHTML = "$" + (verjnakanQanak * carsInfo[5].carGin);
+            verjnakanQanak = 1;
+         } else if (i === 2) {
+            countNum++;
+            card3Img.src = carsInfo[5].carImg;
+            card3Name.innerHTML = carsInfo[5].carName;
+            card3Description.innerHTML = carsInfo[5].carModel;
+            card3Price.innerHTML = "$" + (verjnakanQanak * carsInfo[5].carGin);
+            verjnakanQanak = 1;
+         } else if (i === 3) {
+            countNum++;
+            card4Img.src = carsInfo[5].carImg;
+            card4Name.innerHTML = carsInfo[5].carName;
+            card4Description.innerHTML = carsInfo[5].carModel;
+            card4Price.innerHTML = "$" + (verjnakanQanak * carsInfo[5].carGin);
+            verjnakanQanak = 1;
+         } else if (i === 4) {
+            countNum++;
+            card5Img.src = carsInfo[5].carImg;
+            card5Name.innerHTML = carsInfo[5].carName;
+            card5Description.innerHTML = carsInfo[5].carModel;
+            card5Price.innerHTML = "$" + (verjnakanQanak * carsInfo[5].carGin);
+            verjnakanQanak = 1;
+         } else if (i === 5) {
+            countNum++;
+            card6Img.src = carsInfo[5].carImg;
+            card6Name.innerHTML = carsInfo[5].carName;
+            card6Description.innerHTML = carsInfo[5].carModel;
+            card6Price.innerHTML = "$" + (verjnakanQanak * carsInfo[5].carGin);
+            verjnakanQanak = 1;
+         }
+         val.style.display = 'flex';
+
+         break;
+         // console.log(val + " " + i);
+      }
+   }
 })
 
 
@@ -603,9 +676,9 @@ tesla6Icon.addEventListener('click', () => {
 const cartBtn = document.querySelector('.cartBtn');
 const shopping = document.querySelector('.shopping');
 
-cartBtn.addEventListener('click', function() {
-    shopping.classList.toggle('active');
-    document.body.style.overflowY = 'hidden';
+cartBtn.addEventListener('click', function () {
+   shopping.classList.toggle('active');
+   document.body.style.overflowY = 'hidden';
 })
 
 
@@ -616,9 +689,9 @@ cartBtn.addEventListener('click', function() {
 const likeBtn = document.querySelector('.likeBtn');
 const likeBlank = document.querySelector('.likeBlank');
 
-likeBtn.addEventListener('click', function() {
-    likeBlank.classList.toggle('active');
-    document.body.style.overflowY = 'hidden';
+likeBtn.addEventListener('click', function () {
+   likeBlank.classList.toggle('active');
+   document.body.style.overflowY = 'hidden';
 })
 
 
@@ -655,11 +728,9 @@ let countNum = 0; // count
 
 contCards.forEach((val) => {
    let buyIcon = val.querySelector('.icons .cart');
-   buyIcon.addEventListener('click', function() {
-         if(countNum < cardArray.length) {
-            count.innerText = countNum;
-         }
-   }) 
+   buyIcon.addEventListener('click', function () {
+      count.innerText = countNum;
+   })
 })
 
 
@@ -673,7 +744,7 @@ const mainCards = document.querySelectorAll('.shop-main .card');
 mainCards.forEach((val) => {
    let carddelete = val.querySelector('.delete');
 
-   carddelete.addEventListener('click', function() {
+   carddelete.addEventListener('click', function () {
       val.style.display = 'none';
    })
 
@@ -684,9 +755,37 @@ mainCards.forEach((val) => {
 })
 
 
+/*------------------   Shoping Shotchik   ------------------- */
 
 
+const cards = document.querySelectorAll('#addCont .card');
+let verjnakanQanak = 1;
+console.log(cards);
+cards.forEach((val) => {
+    let pluse = val.querySelector('.shotchik .pluse');
+    let minus = val.querySelector('.minus');
+    let qanak = val.querySelector('.qanak');
+    let gin = val.querySelector('.gin');
+    let numGin = Number(gin.innerText);
+    
+    pluse.addEventListener('click', function() {
+        let ShotchikCount = Number(qanak.innerText);
+        ShotchikCount++;
+        gin.innerText = numGin * ShotchikCount;
+        qanak.innerText = ShotchikCount;
+         verjnakanQanak = qanak.innerText;
+      })
 
+    minus.addEventListener('click', function() {
+        let ShotchikCount = Number(qanak.innerText);
 
+        if(ShotchikCount !== 1) {
+         ShotchikCount--;
+            gin.innerText =  numGin * ShotchikCount;
+            qanak.innerText = ShotchikCount;
+            verjnakanQanak = qanak.innerText;
+         }
+    })
+})
 
 
