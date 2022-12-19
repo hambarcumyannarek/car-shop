@@ -273,7 +273,7 @@ body
 .globalSL > .globalSL-container > .globalSL-main > .card {
     width: 100%;
     padding: 30px 25px;
-    display: none;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     flex-flow: row wrap;

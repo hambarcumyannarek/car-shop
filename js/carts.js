@@ -738,12 +738,26 @@ contCards.forEach((val) => {
 
 
 /*-----------    delete     ---------- */
+const likeCards = document.querySelectorAll('.likeBlank-main .card');
+console.log(likeCards);
+
+likeCards.forEach((val) => {
+   let carddelete = val.querySelector('.delete');
+   carddelete.addEventListener('click', function () {
+      val.style.display = 'none';
+   })
+
+   carddelete.addEventListener('click', () => {
+      countNum--;
+      count.innerText = countNum;
+   })
+})
+
 
 const mainCards = document.querySelectorAll('.shop-main .card');
-
+//console.log(mainCards);
 mainCards.forEach((val) => {
    let carddelete = val.querySelector('.delete');
-
    carddelete.addEventListener('click', function () {
       val.style.display = 'none';
    })
