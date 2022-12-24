@@ -781,9 +781,9 @@ cards.forEach((val) => {
     let qanak = val.querySelector('.qanak');
     let gin = val.querySelector('.gin');
     let numGin = Number(gin.innerText);
-    
+    let ShotchikCount = Number(qanak.innerText);
+
     pluse.addEventListener('click', function() {
-        let ShotchikCount = Number(qanak.innerText);
         ShotchikCount++;
         gin.innerText = numGin * ShotchikCount;
         qanak.innerText = ShotchikCount;
@@ -791,8 +791,6 @@ cards.forEach((val) => {
       })
 
     minus.addEventListener('click', function() {
-        let ShotchikCount = Number(qanak.innerText);
-
         if(ShotchikCount !== 1) {
          ShotchikCount--;
             gin.innerText =  numGin * ShotchikCount;

@@ -1,0 +1,68 @@
+debugger;
+const eye = document.querySelector('#eya');
+let vse = eye.querySelector('.vse');
+let eyaCont = eye.querySelector('.container');
+let closeEye = eyaCont.querySelector('.close');
+let bgImg = eyaCont.querySelector('.img-center img');
+let smImg = eyaCont.querySelectorAll('.img-small img');
+let box = eyaCont.querySelectorAll('.arag .box');
+
+let card = document.querySelectorAll('#addCont .card');
+
+let smImgCont = eyaCont.querySelector('.img-small');
+card.forEach((val) => {
+    let eyeBtn = val.querySelector('.eye');
+    let bigImg = val.querySelector('.eyaHelp .bg');
+    let smallImg = val.querySelectorAll('.eyaHelp .smImg img');
+    eyeBtn.addEventListener('click', function() {
+        eye.classList.toggle('active');
+        bgImg.src = bigImg.src;
+        for(let i = 0; i < smallImg.length; i++) {
+            let img = document.createElement('img');
+            img.setAttribute('src', smallImg[i].src)
+            smImgCont.appendChild(img);
+            // img[i].src = smallImg[i].src;
+        }
+        let eyeBtn = 0;
+        let bigImg = 0;
+        let smallImg = 0;
+    })
+})
+
+function removeEye() {
+    eye.classList.remove('active')
+}
+
+closeEye.addEventListener('click', () => {
+    removeEye();
+})
+
+vse.addEventListener('click', () => {
+    removeEye();
+})
+
+smImg.forEach((val) => {
+    val.addEventListener('click', function() {
+        bgImg.src = val.src;
+        myRemove(smImg);
+        val.classList.add('active');
+    })
+})
+
+function myRemove(event) {
+    event.forEach((val) => {
+        val.classList.remove("active");
+    })
+}
+
+
+
+box.forEach((val) => {
+    val.addEventListener('click', () => {
+        myRemove(box);
+        val.classList.add('active');
+    })
+})
+
+
+

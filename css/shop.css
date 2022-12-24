@@ -18,6 +18,8 @@ body
     background: rgb(10,9,10);
 }
 
+
+
 .navbar
 {
     width: 100%;
@@ -143,7 +145,7 @@ body
     visibility: visible;
 }
 
-.globalSL > .vse {
+.globalSL.active > .vse {
     width: 100%;
     position: absolute;
     top: 0;
@@ -283,6 +285,7 @@ body
     position: relative;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
     overflow: hidden;
+    display: none;
 }
 
 .globalSL > .globalSL-container > .globalSL-main > .card::before {
@@ -535,6 +538,253 @@ body
 .shotchik > button:hover{
     background-color: #fff;
     color: rgb(52,103,193);
+}
+
+/*eya*/
+
+#eya {
+    position: fixed;
+    top: 0; left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 10000;
+    padding: 20px;
+    background: rgba(10,9,10, 0.1);
+    backdrop-filter: blur(8px);
+    visibility: hidden;
+}
+
+#eya.active {
+    visibility: visible;
+}
+
+#eya > .vse {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100vh;
+    background: rgba(10,9,10, 0.1);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    transition: all 0.5s;
+} 
+
+#eya.active > .vse {
+    opacity: 1;
+}
+
+#eya > .container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+    padding: 50px;
+    position: relative;
+    flex-flow: row wrap;
+    gap: 100px;
+    transform: translateY(-10px);
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+
+#eya.active > .container {
+    visibility: visible;
+    transform: translate(0, 0);
+}
+
+
+#eya > .container > .close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+#eya > .container > .close > ion-icon {
+    font-size: 2.5em;
+    color: rgb(17,17,21);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#eya > .container > .close > ion-icon:hover {
+    color: rgb(52,103,193);
+}
+
+#eya > .container > .imgs {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#eya > .container > .imgs > .img-center {
+    width: 100%;
+    overflow: hidden;
+}
+#eya > .container > .imgs > .img-center > img {
+    width: 100%;
+    height: 374px;
+    border-radius: 5px;
+    background-size: cover;
+}
+
+#eya > .container > .imgs > .img-small {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+
+#eya > .container > .imgs > .img-small > img {
+    width: 190px;
+    height: 120px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-size: cover;
+    cursor: pointer;
+    outline-offset: 2px;
+    outline: 3px solid transparent;
+}
+
+#eya > .container > .imgs > .img-small > img.active {
+    outline: 3px solid;
+    outline-offset: 2px;
+    outline-color: rgb(17,17,21);
+}
+
+#eya > .container > .content {
+    display: flex;
+    flex-direction: column;
+    gap: 85px;
+}
+
+#eya > .container > .content > .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+#eya > .container > .content > .title > p {
+    font-size: 1.1em;
+    cursor: pointer;
+    color: rgb(52, 103, 193);
+}
+
+#eya > .container > .content > .title > h2 {
+    font-size: 2.2em;
+    color: rgb(17,17,21);
+}
+
+#eya > .container > .content > .title > .star-cont {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#eya > .container > .content > .title > .star-cont > .star {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#eya > .container > .content > .title > .star-cont > .star > ion-icon {
+    font-size: 1.1em;
+    color: rgb(234, 230, 14);
+}
+
+#eya > .container > .content > .title > .star-cont > span {
+    font-size: 1em;
+    color: rgb(52,103,193);
+}
+
+#eya > .container > .content > .title > .gin {
+    font-size: 1.3em;
+    color: rgb(17,17,21);
+}
+
+#eya > .container > .content > .arag {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-flow: row wrap;
+}
+
+#eya > .container > .content > .arag > .box {
+    padding: 10px 15px;
+    border: 2px solid rgba(17,17,21, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.05);
+    cursor: pointer;
+}
+
+#eya > .container > .content > .arag > .box:hover,
+#eya > .container > .content > .arag > .box.active {
+    background: rgba(17,17,21, 0.8);
+    border: 2px solid rgba(0,0,0, 0.1);
+    box-shadow: 0 0 2px 6px rgba(0,0,0, 0.4);
+}
+
+ #eya > .container > .content > .arag > .box > span {
+    font-size: 1.1em;
+    color: rgb(17,17,21);
+ }
+
+#eya > .container > .content > .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+ #eya > .container > .content > .arag > .box:hover > span,
+ #eya > .container > .content > .arag > .box.active > span {
+    color: #fff;
+ }
+
+
+ #eya > .container > .content > .bottom > table > tbody > tr > td {
+    font-size: 1.1em;
+    padding: 7px 0;
+    color: rgb(17,17,21);
+ }
+
+ #eya > .container > .content > .bottom > table > tbody > tr > td:nth-child(2) {
+    margin-left: 50px;
+ }
+
+
+ #eya > .container > .imgs > .img-small {
+    padding: 5px;
+    width: 100%;
+    overflow-x: auto;
+}
+
+#eya > .container > .imgs > .img-small::-webkit-scrollbar {
+    width: 5px;
+    height: 7px;
+}
+
+#eya > .container > .imgs > .img-small::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+}
+
+#eya > .container > .imgs > .img-small::-webkit-scrollbar-thumb:hover {
+    background: rgb(52,103,193);
+}
+
+#eya > .container > .imgs > .img-small::-webkit-scrollbar-track {
+    background: rgb(17,17,21);
+    filter: blur(70px);
 }
 
 
@@ -1623,6 +1873,39 @@ body
     justify-content: space-evenly;
 }
 }
+
+@media screen and (max-width: 1200px) {
+    #eya {
+        height: 100vh;
+        overflow-y: scroll;
+        align-items: flex-start;
+    }
+    #eya > .container {
+        max-width: 800px;
+        width: 100%;
+        gap: 50px;
+    }
+
+    #eya > .container > .imgs {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    #eya > .container > .content {
+        gap: 50px;
+    }
+
+    #eya > .container > .imgs > .img-center {
+        overflow: hidden;
+    }
+
+    #eya > .container > .imgs > .img-center > img {
+        width: 100%;
+        max-height: 450px;
+        height: 100%;
+    }
+}
+
 @media screen and (max-width: 1119px)
 {
 
@@ -1730,6 +2013,13 @@ body
     .navbar {
         padding: 30px 40px;
     }
+
+    #eya > .container > .imgs > .img-center > img {
+        width: 100%;
+        height: 430px;
+        object-fit: cover;
+    }
+
     }
 
 
@@ -1842,6 +2132,14 @@ body
 
 }
 
+@media screen and (max-width: 700px) {
+    #eya > .container > .imgs > .img-center > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
 @media screen and (max-width: 670px)
 {
     .features > .container
@@ -1906,7 +2204,6 @@ body
 
     .globalSL > .globalSL-container > .globalSL-main > .card {
         width: 230px;
-        display: flex;
         align-items: center;
     }
 
@@ -1973,8 +2270,19 @@ body
 
 .globalSL > .globalSL-container > .globalSL-main > .card {
     width: 250px;
-    display: flex;
     align-items: center;
+}
+
+#eya {
+    padding: 0;
+}
+
+#eya > .container {
+    border-radius: 0;
+}
+
+#eya > .container > .close {
+    top: 1px; right: 1px;
 }
 
 }
@@ -2026,4 +2334,25 @@ body
     right: -80px;
 }
 
+#eya > .container > .imgs > .img-small > img {
+    width: 400px;
+    height: 100px;
 }
+
+#eya > .container > .content > .title > h2 {
+    font-size: 1.8em;
+    color: rgb(17,17,21);
+}
+
+#eya > .container > .imgs > .img-center > img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+#eya > .container {
+    padding: 40px 20px;
+}
+
+}
+
